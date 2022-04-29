@@ -35,7 +35,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getData(){
-    this.http.get("localhost:8080/mydata").subscribe(data=>{
+    this.http.get("http://localhost:8082/api/date").subscribe(data=>{
       console.log(data);
     })
   }
