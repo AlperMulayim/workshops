@@ -33,4 +33,12 @@ public class Product {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private ProductCategory productCategory;
 
+    @ManyToMany
+    @JoinTable(
+            name = "product_tags",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private List<ProductTags> tags;
+
 }
