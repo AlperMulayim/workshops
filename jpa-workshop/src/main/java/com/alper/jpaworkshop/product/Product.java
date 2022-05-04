@@ -1,11 +1,7 @@
 package com.alper.jpaworkshop.product;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jdk.jfr.Category;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,6 +9,7 @@ import java.util.List;
 @Entity
 @Table(name = "products")
 @Data
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +21,9 @@ public class Product {
 
     @Column(name = "product_name")
     private String name;
+
+    @Column(insertable = false, updatable = false)
+    private String dtype;
 
     @JsonIgnore
     @Column(name = "category_id", insertable = false , updatable = false)

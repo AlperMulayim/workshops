@@ -3,8 +3,15 @@ CREATE TABLE products(
     barcode VARCHAR(100),
     product_name VARCHAR(400),
     category_id INT,
+    dtype VARCHAR(50),
     FOREIGN KEY(category_id) REFERENCES categories(id)
 );
+
+CREATE TABLE discounted_products(
+    id INT,
+    discount_percentage DOUBLE
+);
+
 
 CREATE TABLE categories(
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -48,6 +55,8 @@ INSERT INTO product_tags(product_id,tag_id) VALUES(1,3);
 INSERT INTO product_tags(product_id,tag_id) VALUES(3,2);
 INSERT INTO product_tags(product_id,tag_id) VALUES(4,2);
 INSERT INTO product_tags(product_id,tag_id) VALUES(4,3);
+
+INSERT INTO discounted_products(id,discount_percentage) VALUES(3,0.25);
 
 
 
