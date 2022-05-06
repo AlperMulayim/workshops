@@ -20,7 +20,6 @@ public class CartService {
     }
     public CartDetail discountCart(CartDetail cartDetail,Campaing campaing ){
         Double price = campaing.apply(cartDetail.getTotalPrice());
-        cartDetail.setTotalPrice(price);
-        return  cartDetail;
+        return  CartDetail.builder().totalAmount(cartDetail.getTotalAmount()).totalPrice(price).build();
     }
 }

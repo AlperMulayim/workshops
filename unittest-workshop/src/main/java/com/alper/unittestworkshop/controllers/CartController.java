@@ -23,7 +23,7 @@ public class CartController {
         if(cartDetail.getTotalPrice() > 100){
             cartDetail = cartService.discountCart(cartDetail,new Total25PriceCampaing());
         }
-        if(cartDetail.getTotalAmount() > 5){
+        if(cartDetail.getTotalAmount() >= 5){
             cartDetail = cartService.discountCart(cartDetail,new BasketKingCampaing());
         }
         return  cartDetail;
