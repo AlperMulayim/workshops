@@ -1,6 +1,8 @@
 package com.alper.unittestworkshop.services;
 
 import com.alper.unittestworkshop.repositories.ProductRepository;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,8 +26,19 @@ class ProductServiceTest {
     @Autowired
     private  ProductService productService;
 
+    @BeforeAll
+    public static void beforeAll(){
+        System.out.println("Before All");
+    }
+
+    @BeforeEach
+    public void beforeEach(){
+        System.out.println("Before Each");
+    }
+
     @Test
     public void noProductReturnedTest() {
+        System.out.println("TEST - noProductReturnedTest");
         given(productRepository.getProductNames()).willReturn(Collections.emptyList());
         List<String> result =  productService.getProductsWithEvenCharactersWithFiredMethod();
         //there will return empty list as result.
@@ -34,6 +47,7 @@ class ProductServiceTest {
 
     @Test
     public void productFoundsTest(){
+        System.out.println("TEST - productFoundsTest");
         List<String> input = Arrays.asList("aa","bbbb","ccc");
         given(productRepository.getProductNames()).willReturn(input);
         List<String> result = productService.getProductsWithEvenCharactersWithFiredMethod();
@@ -43,6 +57,7 @@ class ProductServiceTest {
     //test if is method called
     @Test
     public void testIfAddProductCalled(){
+        System.out.println("TEST - testIfAddProductCalled");
         List<String> input = Arrays.asList("aa","bbbb","ccc");
         given(productRepository.getProductNames()).willReturn(input);
         List<String> result = productService.getProductsWithEvenCharactersWithFiredMethod();
@@ -51,6 +66,7 @@ class ProductServiceTest {
 
     @Test
     public void testIfNoEvenProduct(){
+        System.out.println("TEST - testIfNoEvenProduct");
         given(productRepository.getProductNames()).willReturn(Collections.emptyList());
         List<String> result = productService.getProductsWithEvenChars();
         assertTrue(result.isEmpty());
