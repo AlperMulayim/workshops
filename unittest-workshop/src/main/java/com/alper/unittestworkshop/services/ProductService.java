@@ -13,13 +13,14 @@ public class ProductService {
     @Autowired
     ProductRepository repository;
 
-    public List<String> getProductsWithEvenCharacters(){
+    public List<String> getProductsWithEvenCharactersWithFiredMethod(){
         List<String> names = repository.getProductNames();
         List<String> results  = new ArrayList<>();
 
         for(String  name : names){
             if(name.length() % 2 == 0){
                 results.add(name);
+                repository.addProductFired(name); //will used to check if called.
             }
         }
         return  results;

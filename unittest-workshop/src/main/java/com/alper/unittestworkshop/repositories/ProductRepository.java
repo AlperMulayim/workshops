@@ -10,4 +10,8 @@ public class ProductRepository {
    public List<String> getProductNames(){
         return Arrays.asList("aaaa","baaa","bbbbb","ccccc");
    }
+
+   public void addProductFired(String  name){
+
+   }
 }
