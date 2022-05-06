@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CartDetail {
     private Integer totalAmount;
-    private  Integer totalPrice;
+    private Double totalPrice;
 }

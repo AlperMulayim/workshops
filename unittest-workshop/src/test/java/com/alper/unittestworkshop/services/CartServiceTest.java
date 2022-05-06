@@ -25,8 +25,8 @@ public class CartServiceTest {
 
     @BeforeEach
     public void initializeProducts(){
-        productA = Product.builder().name("COLA 1 L ").price(7).build();
-        productB = Product.builder().name("MILK 1 L ").price(15).build();
+        productA = Product.builder().name("COLA 1 L ").price(7.0).build();
+        productB = Product.builder().name("MILK 1 L ").price(15.0).build();
         products = new LinkedList<>();
         products.add(productA);
         products.add(productB);
