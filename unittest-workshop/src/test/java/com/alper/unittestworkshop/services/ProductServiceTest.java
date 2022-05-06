@@ -49,4 +49,12 @@ class ProductServiceTest {
         verify(productRepository,times(2)).addProductFired(any());
     }
 
+    @Test
+    public void testIfNoEvenProduct(){
+        given(productRepository.getProductNames()).willReturn(Collections.emptyList());
+        List<String> result = productService.getProductsWithEvenChars();
+        assertTrue(result.isEmpty());
+    }
+
+
 }

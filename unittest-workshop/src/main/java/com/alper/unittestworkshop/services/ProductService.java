@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -24,5 +25,9 @@ public class ProductService {
             }
         }
         return  results;
+    }
+    public List<String> getProductsWithEvenChars(){
+        List<String> names = repository.getProductNames();
+        return names.stream().filter(name-> name.length() % 2 == 0 ).collect(Collectors.toList());
     }
 }
