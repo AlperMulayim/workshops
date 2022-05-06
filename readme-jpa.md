@@ -1,3 +1,78 @@
+## NOTES for JPA.
+#### ManyToOne
+Product.java 
+`````java 
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private ProductCategory productCategory;
+`````
+
+#### ManyToMany
+Product.java
+`````java
+    @ManyToMany
+    @JoinTable(
+            name = "product_tags",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private List<ProductTags> tags;
+`````
+
+#### Inheritance
+Product.java and DiscountedProduct.java
+`````java
+    //Product.java
+    @Entity
+    @Table(name = "products")
+    @Data
+    @Inheritance(strategy = InheritanceType.JOINED)
+    public class Product { //code  }
+    
+    //DiscountedProduct.java
+    @Entity
+    @Data
+    @Table(name = "discounted_products")
+    public class DiscountedProduct  extends  Product{
+        @Column(name = "id")
+        private Integer id;
+        @Column(name = "discount_percentage")
+        private Double percentage;
+    }
+`````
+
+#### application.yml
+`````yml
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/jpadb
+    username: root
+    password: rootpass
+  jpa:
+    hibernate.ddl-auto: validate
+    generate-ddl: true
+    show-sql: true
+`````
+#### database
+``````mysql
+CREATE TABLE products(
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    barcode VARCHAR(100),
+    product_name VARCHAR(400),
+    category_id INT,
+    dtype VARCHAR(50),
+    FOREIGN KEY(category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE discounted_products(
+    id INT,
+    discount_percentage DOUBLE
+);
+
+``````
+
+Result
 ````json
 [
     {
@@ -43,3 +118,6 @@
         ]
     }
 ]
+````
+
+
