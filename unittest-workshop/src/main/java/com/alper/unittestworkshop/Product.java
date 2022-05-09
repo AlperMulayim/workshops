@@ -1,5 +1,6 @@
 package com.alper.unittestworkshop;
 
+import com.alper.unittestworkshop.campaing.Campaing;
 import lombok.Builder;
 import lombok.Data;
 

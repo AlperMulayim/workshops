@@ -1,14 +1,13 @@
 package com.alper.unittestworkshop.campaing;
 
-public class Total25PriceCampaing  implements  Campaing{
-
+public class MilkCampaing  implements  Campaing{
     @Override
     public double apply(Double price) {
-        return price - price * 0.25;
+        return  price - price * 0.70;
     }
 
     @Override
     public String getName() {
-        return "DISCOUNT -- Applied %25 Discount... :)";
+        return "MILKCampaing- % 30 Discount";
     }
 }
