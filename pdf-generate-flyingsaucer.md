@@ -92,6 +92,5 @@ public class PDFGenerator {
     </div>
 
  ```````
-<img width="477" alt="Screen Shot 2022-06-10 at 16 37 49" src="https://user-images.githubusercontent.com/12942688/173077788-53e29d06-828c-498a-811f-732f6159c786.png">
-
+<img width="572" alt="Screen Shot 2022-06-10 at 16 40 31" src="https://user-images.githubusercontent.com/12942688/173078335-bb31af2f-5fa9-427a-9cce-4164d8ce7c39.png">
 
