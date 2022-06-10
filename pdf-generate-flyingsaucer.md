@@ -94,3 +94,65 @@ public class PDFGenerator {
  ```````
 <img width="572" alt="Screen Shot 2022-06-10 at 16 40 31" src="https://user-images.githubusercontent.com/12942688/173078335-bb31af2f-5fa9-427a-9cce-4164d8ce7c39.png">
 
+
+CREATE DOWNLOADABLE PDF for Response 
+`````java
+   public ByteArrayOutputStream generatePdfFromHtml(String html, String outFile) throws IOException, DocumentException {
+        String outputFolder = System.getProperty("user.home") +  File.separator + "desktop" + File.separator + outFile;
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        ITextRenderer renderer = new ITextRenderer();
+        renderer.setDocumentFromString(html);
+        renderer.layout();
+        renderer.createPDF(outputStream);
+
+        outputStream.close();
+        return outputStream;
+    }
+    
+  ``````
+  
+  ``````java
+   @GetMapping(value = "/offers/{id}",produces = MediaType.APPLICATION_PDF_VALUE)
+    public ResponseEntity<InputStreamResource> getOfferReport(@PathVariable(name = "id") Integer id){
+        ReportData data = reportService.getReportData(id);
+
+        ByteArrayOutputStream outputStream = reportService.generateReport(id,data);
+
+        var headers = new HttpHeaders();
+        headers.add("Content-Disposition", "inline; filename=offer_report.pdf");
+
+        InputStream in = new ByteArrayInputStream(outputStream.toByteArray());
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(new InputStreamResource(in));
+
+    }
+    
+    ```````
+    
+    ```````
+     @Override
+    public ByteArrayOutputStream generateReport(Integer reportId, ReportData reportData) {
+
+        PDFGenerator pdfGenerator = new PDFGenerator();
+        Map<String, Object> data = new HashMap<>();
+        data.put("offers",reportData);
+        String str = pdfGenerator.parseThymeleafTemplate("thymeleaf_template.html",data);
+        try {
+           return pdfGenerator.generatePdfFromHtml(str,"offer");
+        } catch (
+                IOException e) {
+            throw new RuntimeException(e);
+        } catch (DocumentException e) {
+            throw new RuntimeException(e);
+        }
+        
+    }
+```````
+
+    
+    
+
