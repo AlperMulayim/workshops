@@ -1,5 +1,6 @@
 package com.alper.security.multiauth.security.filters;
 
+import com.alper.security.multiauth.security.authentications.UsernamePasswordAuth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.stereotype.Component;
@@ -34,6 +35,8 @@ public class UserNamePasswordAuthFilter  extends OncePerRequestFilter {
 
         if(otp != null){
             //step-1
+            UsernamePasswordAuth passwordAuth = new UsernamePasswordAuth(username,password);
+            authenticationManager.authenticate(passwordAuth);
 
         }else{
             //step-2
