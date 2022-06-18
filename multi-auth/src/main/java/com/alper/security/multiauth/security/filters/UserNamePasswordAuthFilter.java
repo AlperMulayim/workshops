@@ -1,8 +1,11 @@
 package com.alper.security.multiauth.security.filters;
 
+import com.alper.security.multiauth.security.authentications.OtpAuth;
 import com.alper.security.multiauth.security.authentications.UsernamePasswordAuth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -36,10 +39,14 @@ public class UserNamePasswordAuthFilter  extends OncePerRequestFilter {
         if(otp != null){
             //step-1
             UsernamePasswordAuth passwordAuth = new UsernamePasswordAuth(username,password);
-            authenticationManager.authenticate(passwordAuth);
+            Authentication result = authenticationManager.authenticate(passwordAuth);
+            SecurityContextHolder.getContext().setAuthentication(passwordAuth);
 
         }else{
             //step-2
+            OtpAuth otpAuth = new OtpAuth(username,otp);
+            Authentication result = authenticationManager.authenticate(otpAuth);
+            SecurityContextHolder.getContext().setAuthentication(otpAuth);
         }
     }
 }
