@@ -1,6 +1,7 @@
 package com.alper.security.multiauth.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "users")
 public class User {

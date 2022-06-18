@@ -1,6 +1,7 @@
 package com.alper.security.multiauth.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Otp {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

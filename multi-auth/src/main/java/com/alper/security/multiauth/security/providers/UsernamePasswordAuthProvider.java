@@ -2,6 +2,7 @@ package com.alper.security.multiauth.security.providers;
 
 import com.alper.security.multiauth.security.authentications.UsernamePasswordAuth;
 import com.alper.security.multiauth.service.JpaUserDetailsService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -15,12 +16,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
+@AllArgsConstructor
 public class UsernamePasswordAuthProvider  implements AuthenticationProvider {
 
-    @Autowired
+
     private JpaUserDetailsService userDetailsService;
 
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
@@ -29,7 +30,7 @@ public class UsernamePasswordAuthProvider  implements AuthenticationProvider {
         String password =(String) authentication.getCredentials();
         UserDetails user = userDetailsService.loadUserByUsername(username);
 
-        if(passwordEncoder.matches(username,user.getPassword())){
+        if(passwordEncoder.matches(password,user.getPassword())){
             return new UsernamePasswordAuth(username,password, List.of(()-> "read"));
         }
         throw  new BadCredentialsException("UsernamePasswordAuthProvider not validate passwords and usernames");
