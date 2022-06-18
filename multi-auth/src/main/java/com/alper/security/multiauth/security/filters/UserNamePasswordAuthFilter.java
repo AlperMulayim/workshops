@@ -24,5 +24,19 @@ public class UserNamePasswordAuthFilter  extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
+        //1 . Username & password
+        //2 . username & otp
+
+        String username = request.getHeader("username");
+        String password = request.getHeader("password");
+        String otp = request.getHeader("otp");
+
+        if(otp != null){
+            //step-1
+
+        }else{
+            //step-2
+        }
     }
 }
