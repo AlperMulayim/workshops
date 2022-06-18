@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.security:spring-security-core:5.6.6-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.6.6-SNAPSHOT/spring-security-core-5.6.6-20220606.213409-9.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.6.6-SNAPSHOT/spring-security-core-5.6.6-20220606.213409-9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.6.6-SNAPSHOT/spring-security-core-5.6.6-20220606.213409-9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
