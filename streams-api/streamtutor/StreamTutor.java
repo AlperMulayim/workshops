@@ -6,11 +6,10 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
 
 public class StreamTutor {
     List<Trader> traders = new LinkedList<>();
@@ -97,6 +96,96 @@ public class StreamTutor {
                 .reduce(0,Integer::sum);
 
         System.out.println("TOTAL TRANSACTIONS AMOUNT "+ total);
+
+    }
+
+    public void groupByYearTransactions(){
+        List<Transaction> transactionList = transactions;
+
+        Map<Integer, List<Transaction>> yearByTransactions =
+                transactionList.stream()
+                        .collect(Collectors.groupingBy(Transaction::getYear));
+
+        System.out.println(yearByTransactions);
+    }
+
+    public void avarageAmountOfTransactions(){
+        List<Transaction> transactionList = transactions;
+
+        double avarage = transactionList.stream()
+                .collect(Collectors.averagingInt(Transaction::getAmount));
+
+        System.out.println("AVARAGE AMOUNT OF TRANSACTIONS -> " + avarage);
+
+    }
+
+    public void avarageAmountOfTransactionsByYear(){
+        List<Transaction> transactionList = transactions;
+
+        Map<Integer, List<Transaction>> yearByTransactions =
+                transactionList.stream()
+                        .collect(Collectors.groupingBy(Transaction::getYear));
+
+        Set<Integer > keys = yearByTransactions.keySet();
+
+        Map<Integer, Double> avarageByYears = new HashMap<>();
+
+        keys.forEach(k-> {
+            List<Transaction> keyTr = yearByTransactions.get(k);
+
+            double avarage = keyTr.stream().collect(Collectors.averagingDouble(Transaction::getAmount));
+            avarageByYears.put(k,avarage);
+        });
+        System.out.println("AVARAGE AMOUNTS BY YEAR");
+        System.out.println(avarageByYears);
+    }
+
+    public void tradersNamesByCity(){
+        List<Transaction> transactionList = transactions;
+
+        Map<String,List<Trader>> traderMap = transactionList.stream()
+                .map(transaction -> transaction.getTrader())
+                .collect(Collectors.groupingBy(Trader::getCity));
+
+        Map<String, String >  tradersByCity = new HashMap<>();
+        Set<String> traderCities =  traderMap.keySet();
+
+        traderCities.forEach( city->{
+                    String traderNames =  traderMap.get(city).stream()
+                            .map(Trader::getName)
+                            .collect(Collectors.joining(", "));
+                    tradersByCity.put(city,traderNames);
+                }
+        );
+
+        System.out.println(tradersByCity);
+
+    }
+
+    public void customGrouping(){
+        //GROUP TRANSACTİONS WITH THEIR LEVEL OF LOW HIGH AND MED.
+        List<Transaction> transactionList = transactions;
+        enum TransactionLevels {HIGH, MEDIUM, LOW}
+
+        Map<TransactionLevels, List<Transaction>> transactionByLevels =
+                transactionList.stream()
+                        .collect(groupingBy(tr->
+                        {
+                            if(tr.getAmount() < 500) return TransactionLevels.LOW;
+                            else if (tr.getAmount() <= 1500) {
+                                return TransactionLevels.MEDIUM;
+                            }
+                            else return TransactionLevels.HIGH;
+                        }));
+
+
+        System.out.println(transactionByLevels);
+        System.out.println("HIGH TRANSACTIONS -> " + transactionByLevels.get(TransactionLevels.HIGH).size() );
+        System.out.println(transactionByLevels.get(TransactionLevels.HIGH));
+        System.out.println("MEDIUM TRANSACTIONS -> " + transactionByLevels.get(TransactionLevels.MEDIUM).size());
+        System.out.println(transactionByLevels.get(TransactionLevels.MEDIUM));
+        System.out.println("LOW TRANSACTIONS -> " + transactionByLevels.get(TransactionLevels.LOW).size());
+        System.out.println(transactionByLevels.get(TransactionLevels.LOW));
 
     }
     public void getOnlyCities(){

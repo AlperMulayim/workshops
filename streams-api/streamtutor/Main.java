@@ -37,8 +37,20 @@ public class Main {
         streamTutor.findTotalTransactions();
         System.out.println();
 
+        streamTutor.groupByYearTransactions();
+        System.out.println();
 
+        streamTutor.avarageAmountOfTransactions();
+        System.out.println();
 
+        streamTutor.avarageAmountOfTransactionsByYear();
+        System.out.println();
+
+        streamTutor.tradersNamesByCity();
+        System.out.println();
+
+        streamTutor.customGrouping();
+        System.out.println();
 
 
     }
