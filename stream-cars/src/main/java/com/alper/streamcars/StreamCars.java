@@ -104,6 +104,40 @@ public class StreamCars  {
 
     }
 
+    public Integer maxPriceCar(){
+        return carsService.getAllCars().stream()
+                .map(Car::getPrice)
+                .reduce(Integer::max).get();
+    }
+    public Set<Car> findMaxPricedCar(){
+        Integer maxPrice =  carsService.getAllCars().stream()
+                .map(Car::getPrice)
+                .reduce(Integer::max).get();
+
+        return  carsService.getAllCars().stream()
+                .filter(car -> car.getPrice().equals(maxPrice)).collect(Collectors.toSet());
+
+    }
+
+    public Map<String, Integer> groupByCreditCardCarSelling(){
+
+        Map<String, List<Car>> sellingsByCards;
+        Map<String, Integer> creditCardsStat = new HashMap<>();
+
+        sellingsByCards = carsService.getAllCars().stream()
+                .collect(Collectors.groupingBy(Car::getCredittype));
+
+        sellingsByCards.keySet().forEach(key->
+                {
+                       Integer numOfCars = sellingsByCards.get(key).size();
+                       creditCardsStat.put(key,numOfCars);
+                }
+        );
+
+     return creditCardsStat;
+
+    }
+
     public SystemStatistic getStatus(){
 
         SystemStatistic statistic = SystemStatistic.builder()
@@ -112,6 +146,9 @@ public class StreamCars  {
                 .totalCustomers(carsService.getAllCars().size())
                 .customerArea(customersArea())
                 .locations(getLocations())
+                .maxPriceCar(maxPriceCar())
+                .maxPricedCars(findMaxPricedCar())
+                .creaditCardTypes(groupByCreditCardCarSelling())
                 .build();
 
         return statistic;
