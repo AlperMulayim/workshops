@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
 public class StreamTutor {
@@ -187,7 +188,12 @@ public class StreamTutor {
         System.out.println("LOW TRANSACTIONS -> " + transactionByLevels.get(TransactionLevels.LOW).size());
         System.out.println(transactionByLevels.get(TransactionLevels.LOW));
 
+        transactionByLevels.forEach((level,tr)->System.out.println(level  + " -> " + tr.size()));
+
     }
+
+
+
     public void getOnlyCities(){
         List<Transaction> transactionList =  transactions;
 
