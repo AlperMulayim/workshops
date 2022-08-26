@@ -9,15 +9,18 @@ create table cars (
 	credittype VARCHAR(50),
 	price INT
 );
+
+
+
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (1, 'Dennie', 'Yazykovo', 'Russia', 'Diablo', 'Lamborghini', 2002, 'mastercard', 983952);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (2, 'Reed', 'Cherepovets', 'Russia', 'Century', 'Buick', 2011, 'bankcard', 915445);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (3, 'Reg', 'Zolotkovo', 'Russia', 'Amanti', 'Kia', 2020, 'visa', 63558);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (3, 'Yetty', 'Zolotkovo', 'Russia', 'Amanti', 'Kia', 2020, 'visa', 63558);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (4, 'Susana', 'Saratov', 'Russia', 'Fusion', 'Ford', 2005, 'bankcard', 684275);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (5, 'Katrina', 'Shimorskoye', 'Russia', 'Reatta', 'Buick', 2015, 'mastercard', 828668);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (6, 'Matilda', 'Palaiópyrgos', 'Greece', 'Suburban 1500', 'Chevrolet', 2010, 'visa', 647931);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (7, 'Parry', 'Azovo', 'Russia', 'Tracer', 'Mercury', 2001, 'bankcard', 516821);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (8, 'Pauly', 'Tommot', 'Russia', 'Xterra', 'Nissan', 2008, 'visa', 770632);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (9, 'Darsey', 'Vrilissia', 'Greece', 'rio', 'Volkswagen', 2003, 'bankcard', 736824);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (9, 'Susana', 'Vrilissia', 'Greece', 'rio', 'Volkswagen', 2003, 'bankcard', 736824);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (10, 'Lois', 'Yessentuki', 'Russia', 'Grand Caravan', 'Dodge', 2019, 'visa', 410960);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (11, 'Shaylyn', 'Palaiochóri', 'Greece', 'Sephia', 'Kia', 2006, 'mastercard', 347045);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (12, 'Rafaellle', 'Podosinovets', 'Russia', 'Rio', 'Kia', 2021, 'visa', 153706);
@@ -181,7 +184,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (170, 'Corine', 'Pámfylla', 'Greece', 'DeVille', 'Cadillac', 2010, 'mastercard', 295586);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (171, 'Cher', 'Timashëvsk', 'Russia', 'A6', 'Audi', 2018, 'mastercard', 502103);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (172, 'Daron', 'Magnitka', 'Russia', 'TL', 'Acura', 2007, 'visa', 226101);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (173, 'Ermentrude', 'Bryansk', 'Russia', 'Town Car', 'Lincoln', 2002, 'visa', 358583);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (173, 'Yetty', 'Bryansk', 'Russia', 'Town Car', 'Lincoln', 2002, 'visa', 358583);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (174, 'Lothario', 'Fakel', 'Russia', 'Corvette', 'Chevrolet', 2006, 'visa', 174112);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (175, 'Arley', 'Poretskoye', 'Russia', 'Cavalier', 'Chevrolet', 2009, 'visa', 75408);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (176, 'Floria', 'Yalkhoy-Mokhk', 'Russia', 'A8', 'Audi', 2004, 'bankcard', 208122);
@@ -367,7 +370,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (356, 'Sherman', 'Tyret’ Pervaya', 'Russia', 'XL-7', 'Suzuki', 2005, 'mastercard', 866462);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (357, 'Sileas', 'Krasnofarfornyy', 'Russia', 'Regal', 'Buick', 2007, 'mastercard', 92387);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (358, 'Genni', 'Krasnaya Polyana', 'Russia', 'S-Class', 'Mercedes-Benz', 2005, 'visa', 839206);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (359, 'Willy', 'Baraba', 'Russia', '5 Series', 'BMW', 2020, 'mastercard', 93130);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (359, 'Yetty', 'Baraba', 'Russia', '5 Series', 'BMW', 2020, 'mastercard', 93130);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (360, 'Randie', 'Nizhnevartovsk', 'Russia', '9-5', 'Saab', 2006, 'mastercard', 762138);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (361, 'Erna', 'Néa Karváli', 'Greece', 'Rodeo Sport', 'Isuzu', 2002, 'mastercard', 164052);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (362, 'Garrett', 'Pesochnoye', 'Russia', 'K5 Blazer', 'Chevrolet', 2011, 'visa', 410002);
@@ -402,7 +405,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (391, 'Collete', 'Glubokiy', 'Russia', 'DTS', 'Cadillac', 2018, 'bankcard', 143762);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (392, 'Esmeralda', 'Budenovetc', 'Russia', 'Escort', 'Ford', 2013, 'mastercard', 749211);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (393, 'Lorilyn', 'Galátsi', 'Greece', 'Dakota', 'Dodge', 2001, 'bankcard', 539003);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (394, 'Daniela', 'Peredovaya', 'Russia', 'Grand Prix', 'Pontiac', 2015, 'mastercard', 695842);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (394, 'Susana', 'Peredovaya', 'Russia', 'Grand Prix', 'Pontiac', 2015, 'mastercard', 695842);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (395, 'Arleta', 'Rudnya', 'Russia', '5 Series', 'BMW', 2018, 'mastercard', 644274);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (396, 'Nehemiah', 'Yakovlevskoye', 'Russia', 'Quest', 'Nissan', 2011, 'mastercard', 923754);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (397, 'Deirdre', 'Asbest', 'Russia', 'GTO', 'Pontiac', 2020, 'visa', 124902);
@@ -629,7 +632,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (618, 'Farrah', 'Solntsevo', 'Russia', 'CR-V', 'Honda', 2005, 'visa', 480228);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (619, 'Blondy', 'Chemal', 'Russia', 'I', 'Infiniti', 2005, 'visa', 541617);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (620, 'Debor', 'Pyshchug', 'Russia', '928', 'Porsche', 2001, 'visa', 937401);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (621, 'Miller', 'Ponyri Vtoryye', 'Russia', 'Bonneville', 'Pontiac', 2002, 'visa', 845776);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (621, 'Susana', 'Ponyri Vtoryye', 'Russia', 'Bonneville', 'Pontiac', 2002, 'visa', 845776);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (622, 'Christabel', 'Megalópoli', 'Greece', 'Grand Am', 'Pontiac', 2008, 'bankcard', 322656);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (623, 'Hilary', 'Orekhovo-Borisovo', 'Russia', 'Contour', 'Ford', 2003, 'bankcard', 545565);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (624, 'Rockwell', 'Svetlograd', 'Russia', 'Intrepid', 'Dodge', 2008, 'bankcard', 129198);
@@ -640,7 +643,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (629, 'Faun', 'Syrskoye', 'Russia', 'Ranger', 'Ford', 2013, 'visa', 370374);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (630, 'Mabel', 'Nadvoitsy', 'Russia', 'TL', 'Acura', 2004, 'mastercard', 191011);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (631, 'Ania', 'Yegorlykskaya', 'Russia', 'Caliber', 'Dodge', 2001, 'bankcard', 987382);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (632, 'Tamiko', 'Tashtagol', 'Russia', 'V90', 'Volvo', 2005, 'mastercard', 101135);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (632, 'Yetty', 'Tashtagol', 'Russia', 'V90', 'Volvo', 2005, 'mastercard', 101135);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (633, 'Juanita', 'Próchoma', 'Greece', 'Avalon', 'Toyota', 2017, 'mastercard', 869070);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (634, 'Warner', 'Nicosia', 'Cyprus', '5000CS', 'Audi', 2010, 'visa', 794194);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (635, 'Leroi', 'Novoalekseyevskaya', 'Russia', 'Impreza', 'Subaru', 2020, 'visa', 323508);
@@ -907,7 +910,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (896, 'Juanita', 'Shchukino', 'Russia', 'Vibe', 'Pontiac', 2001, 'mastercard', 376785);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (897, 'Emily', 'Áno Kopanákion', 'Greece', 'S10', 'Chevrolet', 2011, 'mastercard', 53858);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (898, 'Lorrayne', 'Suvorovskaya', 'Russia', 'Escalade ESV', 'Cadillac', 2000, 'visa', 774484);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (899, 'Violette', 'Néa Mákri', 'Greece', 'Topaz', 'Mercury', 2016, 'visa', 58760);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (899, 'Yetty', 'Néa Mákri', 'Greece', 'Topaz', 'Mercury', 2016, 'visa', 58760);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (900, 'Milt', 'Goyty', 'Russia', 'Corvette', 'Chevrolet', 2013, 'visa', 429661);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (901, 'Horten', 'Krasnogorodskoye', 'Russia', 'Impala', 'Chevrolet', 2007, 'mastercard', 259831);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (902, 'Kayle', 'Ust’ye', 'Russia', 'Durango', 'Dodge', 2001, 'visa', 826664);
@@ -988,7 +991,7 @@ insert into cars (id, fname, city, country, model, manufactorer, soldyear, credi
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (977, 'Sergei', 'Novoul’yanovsk', 'Russia', '600SL', 'Mercedes-Benz', 2009, 'visa', 54910);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (978, 'Micky', 'Kurumkan', 'Russia', 'Odyssey', 'Honda', 2013, 'visa', 344156);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (979, 'Lizette', 'Orlovskiy', 'Russia', 'Justy', 'Subaru', 2008, 'bankcard', 470302);
-insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (980, 'Julie', 'Porkhov', 'Russia', 'Econoline E150', 'Ford', 2000, 'mastercard', 968713);
+insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (980, 'Yetty', 'Porkhov', 'Russia', 'Econoline E150', 'Ford', 2000, 'mastercard', 968713);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (981, 'Gasper', 'Áthyra', 'Greece', 'Caravan', 'Dodge', 2002, 'visa', 409190);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (982, 'Cookie', 'Olenyok', 'Russia', 'IS-F', 'Lexus', 2011, 'mastercard', 280621);
 insert into cars (id, fname, city, country, model, manufactorer, soldyear, credittype, price) values (983, 'Abel', 'Nogliki', 'Russia', 'Quest', 'Nissan', 2004, 'bankcard', 997405);
