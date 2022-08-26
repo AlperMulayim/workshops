@@ -3,9 +3,11 @@ package com.alper.streamcars;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.print.DocFlavor;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -50,4 +52,71 @@ public class StreamCars  {
                 .map(Car::getPrice)
                 .reduce(0,Integer::sum);
     }
+
+    public Set<String> findSystemCountries(){
+
+        return carsService.getAllCars().stream()
+                .map(Car::getCountry)
+                .collect(Collectors.toSet());
+    }
+
+    public Map<String, Integer> customersArea(){
+        Map<String, Integer> customersArea = new HashMap<>();
+        enum CustomersArea { EUROPE, ASIA }
+
+        List<Car> allCars = carsService.getAllCars();
+
+        Map<CustomersArea, List<Car>>  carsByArea = allCars.stream()
+                .collect(Collectors.groupingBy(car -> {
+                    if(car.getCountry().equals("Turkey") || car.getCountry().equals("Russia")){
+                        return  CustomersArea.ASIA;
+                    }else{
+                        return CustomersArea.EUROPE;
+                    }
+                }));
+
+        customersArea.put("ASIA",carsByArea.get(CustomersArea.ASIA).size());
+        customersArea.put("EUROPE",carsByArea.get(CustomersArea.EUROPE).size());
+
+        return  customersArea;
+    }
+
+    public Map<String, String> getLocations(){
+        Map<String,List<Car>> cars = new HashMap<>();
+        Map<String, String> locations = new HashMap<>();
+
+        cars = carsService.getAllCars().stream()
+                .collect(Collectors.groupingBy(Car::getCountry));
+
+        Set<String> keys = cars.keySet();
+
+        Map<String, List<Car>> finalCars = cars;
+        keys.forEach(key->{
+
+            String ciites = finalCars.get(key).stream()
+                    .map(Car::getCity)
+                    .distinct()
+                    .collect(Collectors.joining(", "));
+            locations.put(key,ciites);
+
+        });
+        return locations;
+
+    }
+
+    public SystemStatistic getStatus(){
+
+        SystemStatistic statistic = SystemStatistic.builder()
+                .countries(findSystemCountries())
+                .totalPrice(totalPriceOfSystem())
+                .totalCustomers(carsService.getAllCars().size())
+                .customerArea(customersArea())
+                .locations(getLocations())
+                .build();
+
+        return statistic;
+    }
+
+
+
 }

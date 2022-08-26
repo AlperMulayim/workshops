@@ -57,9 +57,9 @@ public class CarsController {
         return streamCars.getContriesCarTotal();
     }
 
-    @GetMapping("/system/totalprice")
-    public Integer totalPriceOfSystem(){
-        return streamCars.totalPriceOfSystem();
+    @GetMapping("/system/statistic")
+    public SystemStatistic totalPriceOfSystem(){
+        return streamCars.getStatus();
     }
 
 }
