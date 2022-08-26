@@ -29,7 +29,7 @@ public class Car {
     private String country;
     private String model;
     private String manufactorer;
-    private String soldyear;
+    private Integer soldyear;
     @Column(name = "credittype")
     private String credittype;
     private Integer price;
