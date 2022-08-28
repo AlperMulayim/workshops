@@ -1,13 +1,12 @@
 package com.alper.streamcars;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.print.DocFlavor;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -143,17 +142,79 @@ public class StreamCars  {
         SystemStatistic statistic = SystemStatistic.builder()
                 .countries(findSystemCountries())
                 .totalPrice(totalPriceOfSystem())
+                .fordModels(getFordModelsWithCommaSeparated())
                 .totalCustomers(carsService.getAllCars().size())
                 .customerArea(customersArea())
                 .locations(getLocations())
                 .maxPriceCar(maxPriceCar())
                 .maxPricedCars(findMaxPricedCar())
                 .creaditCardTypes(groupByCreditCardCarSelling())
+                .moreThan5LetterCitiesCount(getTotalNumberOfCitiesOfNamesLongerThanGivenNum())
+                .kiaAndFordCars(findListOfCarsOnlyManufactorerKiaAndFord())
+                .averageFordIncome(findAverageIncomeForFord())
+                .fordSoldModelsYear(findEachCarModelAndSoldYearForMasterCardOperations())
+                .groupCarsWithManFirst3Letter(groupTheCarsWithManufactorerFirst3Letters())
+                .longestCityInSystem(findTheLongestCityNameInSystem())
                 .build();
 
         return statistic;
     }
 
+    public Integer getTotalNumberOfCitiesOfNamesLongerThanGivenNum(){
+        List<Car> cars = carsService.getAllCars();
+        return  cars.stream().map(Car::getCity).filter(s -> s.length() > 10).collect(Collectors.toList()).size();
+    }
 
+    public List<Car> findListOfCarsOnlyManufactorerKiaAndFord(){
+        List<Car> cars = carsService.getAllCars();
+        return  cars.stream()
+                .filter(man->man.getManufactorer().equals("Kia") || man.getManufactorer().equals("Ford"))
+                .collect(Collectors.toList());
+    }
+
+    public double findAverageIncomeForFord(){
+        List<Car> cars = carsService.getAllCars();
+        return  cars.stream().filter(c-> c.getManufactorer().equals("Ford"))
+                .collect(Collectors.averagingDouble(Car::getPrice));
+
+    }
+
+    public String getFordModelsWithCommaSeparated(){
+        List<Car> cars = carsService.getAllCars();
+
+        return  cars.stream().filter(c-> c.getManufactorer().equals("Ford"))
+                .map(Car::getModel)
+                .distinct()
+                .collect(Collectors.joining(", "));
+    }
+
+    public List<String> findEachCarModelAndSoldYearForMasterCardOperations(){
+        List<Car> cars = carsService.getAllCars();
+
+        return  cars.stream().filter(c->c.getCredittype().equals("mastercard"))
+                .filter(car -> car.getManufactorer().equals("Ford"))
+                .map(car -> String.format("%s - %s - %s",car.getCountry(),car.getModel(), car.getSoldyear()))
+                .distinct()
+                .collect(Collectors.toList());
+
+    }
+
+    public Map<String, List<Car>> groupTheCarsWithManufactorerFirst3Letters(){
+        List<Car> cars = carsService.getAllCars();
+
+        return cars.stream()
+                .distinct()
+                .collect(Collectors.groupingBy(c->
+                 c.getCountry().substring(0,3).toUpperCase(Locale.ROOT)));
+
+    }
+
+    public String findTheLongestCityNameInSystem(){
+        List<Car> cars = carsService.getAllCars();
+
+        return  cars.stream()
+                .map(Car::getCity)
+                .sorted(Comparator.comparing(String::length).reversed()).findFirst().get();
+    }
 
 }
