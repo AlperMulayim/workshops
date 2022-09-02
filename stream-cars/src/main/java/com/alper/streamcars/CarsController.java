@@ -4,10 +4,7 @@ import org.hibernate.cfg.NotYetImplementedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -107,4 +104,30 @@ public class CarsController {
         return  cars;
     }
 
+    @GetMapping("v3/filter")
+    public List<Car> filterCarsV3(@RequestParam(name = "id", required = false) Optional<Integer> id,
+                                @RequestParam(name = "startYear", required = false) Optional<Integer> startYear,
+                                @RequestParam(name = "endYear", required = false) Optional<Integer> endYear,
+                                @RequestParam(name = "price", required = false) Optional<Integer> price,
+                                @RequestParam(name = "manufacturer", required = false) Optional<String> manufacturer,
+                                @RequestParam(name = "country", required = false) Optional<String> country
+    ){
+
+        Predicate<Car> countryPred = car -> car.getCountry().equals(country.get());
+        Predicate<Car> manufactorerPred = car -> car.getManufactorer().equals(manufacturer.get());
+
+        List<Predicate<Car>> carFilter = Arrays.asList(countryPred,manufactorerPred);
+
+        List<Car> cars = service.getAllCars();
+
+        cars = cars.stream().filter(carFilter.stream()
+                        .reduce(predicate-> true, Predicate::and))
+                .collect(Collectors.toList());
+
+
+        return cars;
+
+    }
+
 }
+
