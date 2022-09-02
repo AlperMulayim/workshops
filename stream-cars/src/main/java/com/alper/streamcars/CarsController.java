@@ -4,9 +4,12 @@ import org.hibernate.cfg.NotYetImplementedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/cars")
@@ -60,6 +63,48 @@ public class CarsController {
     @GetMapping("/system/statistic")
     public SystemStatistic totalPriceOfSystem(){
         return streamCars.getStatus();
+    }
+
+    @GetMapping("v2/filter")
+    public List<Car> filterCars(@RequestParam(name = "id", required = false) Optional<Integer> id,
+                                @RequestParam(name = "startYear", required = false) Optional<Integer> startYear,
+                                @RequestParam(name = "endYear", required = false) Optional<Integer> endYear,
+                                @RequestParam(name = "price", required = false) Optional<Integer> price,
+                                @RequestParam(name = "manufacturer", required = false) Optional<String> manufacturer,
+                                @RequestParam(name = "country", required = false) Optional<String> country
+    ) {
+        List<Car> cars = service.getAllCars();
+        Predicate<Car> countryPredicete = car -> car.getCountry().equals(country.get());
+
+        if(id.isPresent()){
+            cars =  cars.stream().filter(car -> car.getId().equals(id.get())).collect(Collectors.toList());
+        }
+        if(manufacturer.isPresent()){
+            cars = cars.stream()
+                    .filter(car -> car.getManufactorer().equals(manufacturer.get()))
+                    .collect(Collectors.toList());
+        }
+        if(startYear.isPresent() && endYear.isPresent()){
+            Integer start = startYear.get();
+            Integer end = endYear.get();
+
+            cars = cars.stream()
+                    .filter(car -> car.getSoldyear() >= start)
+                    .filter(car -> car.getSoldyear() <= end)
+                    .collect(Collectors.toList());
+
+        }
+        if(price.isPresent()){
+            cars =cars.stream()
+                    .filter(car -> car.getPrice() < price.get())
+                    .collect(Collectors.toList());
+        }
+        if(country.isPresent()){
+            cars = cars.stream()
+                    .filter(countryPredicete)
+                    .collect(Collectors.toList());
+        }
+        return  cars;
     }
 
 }
