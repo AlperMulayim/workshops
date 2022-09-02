@@ -24,7 +24,7 @@
                 .collect(Collectors.toList());
 ``````
 
-#### reduce()
+### reduce()
 `````java
 Optional<Integer> highest = transactionList.stream()
                 .map(Transaction::getAmount)
