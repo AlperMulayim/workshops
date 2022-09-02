@@ -1,6 +1,8 @@
 package com.alper.streamcars;
 
+import org.apache.logging.log4j.util.PropertySource;
 import org.hibernate.cfg.NotYetImplementedException;
+import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,7 +70,9 @@ public class CarsController {
                                 @RequestParam(name = "endYear", required = false) Optional<Integer> endYear,
                                 @RequestParam(name = "price", required = false) Optional<Integer> price,
                                 @RequestParam(name = "manufacturer", required = false) Optional<String> manufacturer,
-                                @RequestParam(name = "country", required = false) Optional<String> country
+                                @RequestParam(name = "country", required = false) Optional<String> country,
+                                @RequestParam(name="orderBy", required = false) Optional<String> orderby,
+                                @RequestParam(name = "order",required = false) Optional<String> order
     ) {
         List<Car> cars = service.getAllCars();
         Predicate<Car> countryPredicete = car -> car.getCountry().equals(country.get());
@@ -101,6 +105,23 @@ public class CarsController {
                     .filter(countryPredicete)
                     .collect(Collectors.toList());
         }
+
+        if(orderby.isPresent() && order.isPresent()){
+            String  orderBy = orderby.get();
+            String orderType = order.get();
+
+            if(orderBy.equals("soldyear")){
+                if(orderType.equals("DESC")){
+                    cars = cars.stream()
+                            .sorted(Comparator.comparingInt(Car::getSoldyear))
+                            .collect(Collectors.toList());
+                }else{
+                    cars = cars.stream()
+                            .sorted(Comparator.comparingInt(Car::getSoldyear).reversed())
+                            .collect(Collectors.toList());
+                }
+            }
+        }
         return  cars;
     }
 
@@ -117,13 +138,11 @@ public class CarsController {
         Predicate<Car> manufactorerPred = car -> car.getManufactorer().equals(manufacturer.get());
 
         List<Predicate<Car>> carFilter = Arrays.asList(countryPred,manufactorerPred);
-
         List<Car> cars = service.getAllCars();
 
         cars = cars.stream().filter(carFilter.stream()
                         .reduce(predicate-> true, Predicate::and))
                 .collect(Collectors.toList());
-
 
         return cars;
 
