@@ -72,7 +72,8 @@ public class CarsController {
                                 @RequestParam(name = "manufacturer", required = false) Optional<String> manufacturer,
                                 @RequestParam(name = "country", required = false) Optional<String> country,
                                 @RequestParam(name="orderBy", required = false) Optional<String> orderby,
-                                @RequestParam(name = "order",required = false) Optional<String> order
+                                @RequestParam(name = "order",required = false) Optional<String> order,
+                                @RequestParam(name = "top", required = false) Optional<Integer> top
     ) {
         List<Car> cars = service.getAllCars();
         Predicate<Car> countryPredicete = car -> car.getCountry().equals(country.get());
@@ -121,6 +122,11 @@ public class CarsController {
                             .collect(Collectors.toList());
                 }
             }
+        }
+
+        if(top.isPresent()){
+            Integer t = top.get();
+            cars = cars.stream().limit(t).collect(Collectors.toList());
         }
         return  cars;
     }
