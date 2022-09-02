@@ -106,6 +106,21 @@ public Map<String, Integer> customersArea(){
 
 ``````
 
+### PREDICATE
+
+``````java
+Predicate<Car> countryPred = car -> car.getCountry().equals(country.get());
+        Predicate<Car> manufactorerPred = car -> car.getManufactorer().equals(manufacturer.get());
+
+        List<Predicate<Car>> carFilter = Arrays.asList(countryPred,manufactorerPred);
+        List<Car> cars = service.getAllCars();
+
+        cars = cars.stream().filter(carFilter.stream()
+                        .reduce(predicate-> true, Predicate::and))
+                .collect(Collectors.toList());
+
+        return cars;
+``````
 
 
 
