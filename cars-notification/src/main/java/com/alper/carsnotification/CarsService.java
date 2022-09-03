@@ -13,4 +13,8 @@ public class CarsService {
     public List<Car> getAllCars(){
         return this.repository.findAll();
     }
+
+    public Car addCar(Car car){
+        return  this.repository.save(car);
+    }
 }

@@ -1,9 +1,8 @@
 package com.alper.carsnotification;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,8 +13,19 @@ public class CarController {
     @Autowired
     private  CarsService carsService;
 
+    @Autowired
+    private  SimpMessagingTemplate notTemplate;
+
+
     @GetMapping
     public List<Car> getAllCars(){
         return  carsService.getAllCars().subList(0,100);
+    }
+
+    @PostMapping
+    public void addCar(@RequestBody Car car){
+        carsService.addCar(car);
+        //when new car added sent notifications.
+        notTemplate.convertAndSend("/notifications/subscribe",car);
     }
 }
