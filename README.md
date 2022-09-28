@@ -7,3 +7,4 @@ Notes:
 - [Spring Security-2](spring-security/spring-security.md)
 - [Stream Api](stream-api.md)
 - [Swagger](swagger.md)
+- [Spring Actuator](spring-actuator.md)
