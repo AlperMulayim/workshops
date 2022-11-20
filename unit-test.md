@@ -153,7 +153,13 @@ class ProductServiceTest {
 
 
 }
-
+`````
+`````java
+    
+    @ParameterizedTest
+    @CsvSource(value = {"0,0", "11,5", "10,0","25,5","101,10"}, delimiter = ',')
+    void parameterTes7t(Integer input, Integer exp){
+        assertEquals(exp, referenceSystem.calculateReferencePoint(input));
+    }
+   
 ``````
-
-    @DisplayName("cartDiscountBasketValue - BasketCampaing When disCart have more than or equal 5 items will have %5 discount")
