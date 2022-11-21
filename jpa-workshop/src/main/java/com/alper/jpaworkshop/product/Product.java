@@ -5,12 +5,13 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
-@Entity
+@Entity(name = "Product")
 @Table(name = "products")
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Product {
+public class Product extends   IProduct{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -41,4 +42,13 @@ public class Product {
     )
     private List<ProductTags> tags;
 
+    @Override
+    public String getDetail() {
+        String detail = null;
+
+        detail = getCategory() +
+                " " +
+                tags.stream().map(tag-> tag.getName()).collect(Collectors.joining(", "));
+        return detail;
+    }
 }

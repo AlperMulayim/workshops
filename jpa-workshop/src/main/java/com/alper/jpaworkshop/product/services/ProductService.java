@@ -1,5 +1,6 @@
 package com.alper.jpaworkshop.product.services;
 
+import com.alper.jpaworkshop.product.IProduct;
 import com.alper.jpaworkshop.product.Product;
 import com.alper.jpaworkshop.product.ProductCategory;
 import com.alper.jpaworkshop.product.repositories.CategoryRepository;
@@ -27,5 +28,8 @@ public class ProductService {
 
     public List<Product> findByCategory(Integer category){
         return productRepository.findByCategory(category);
+    }
+    public List<IProduct> getAllIProducts(){
+        return  this.productRepository.getIProducts();
     }
 }

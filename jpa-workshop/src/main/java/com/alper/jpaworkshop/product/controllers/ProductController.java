@@ -1,5 +1,6 @@
 package com.alper.jpaworkshop.product.controllers;
 
+import com.alper.jpaworkshop.product.IProduct;
 import com.alper.jpaworkshop.product.Product;
 import com.alper.jpaworkshop.product.ProductCategory;
 import com.alper.jpaworkshop.product.services.ProductService;
@@ -27,5 +28,10 @@ public class ProductController {
             return  productService.findByCategory(cat.get());
         }
         return productService.getAll();
+    }
+
+    @GetMapping("/iproducts")
+    public List<IProduct> getIProducts(){
+        return  productService.getAllIProducts();
     }
 }
