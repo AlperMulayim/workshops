@@ -55,3 +55,22 @@ db.routes.find({
 
 db.routes.find({ "airline.name": "Southwest Airlines", stops: { $gte: 1 } })
 
+
+Find every document in the sales collection that meets the following criteria:
+Purchased online
+Used a coupon
+Purchased by a customer 25 years old or younger
+
+db.sales.find({
+  couponUsed: true,
+  purchaseMethod: "Online",
+  "customer.age": { $lte: 25 }
+})
+
+Return every document in the sales collection that meets one of the following criteria:
+Item with the name of pens
+Item with a writing tag
+
+db.sales.find({
+  $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
+})
