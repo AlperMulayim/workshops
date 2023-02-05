@@ -313,3 +313,17 @@ db.trips.countDocuments({ tripduration: { $gt: 120 }, usertype: "Subscriber" })
 db.sales.countDocuments({storeLocation:"Denver",couponUsed:true});
 db.sales.countDocuments({"item.name":"laptop","item.price": {$lt:600}});
 
+The following aggregation pipeline finds the documents with a field named "state" that matches a value "CA" and then groups those documents by the group key "$city" and shows the total number of zip codes in the state of California.
+
+db.zips.aggregate([
+{   
+   $match: { 
+      state: "CA"
+    },
+   $group: {
+      _id: "$city",
+      totalZips: { $count : { } }
+   }
+}
+])
+
