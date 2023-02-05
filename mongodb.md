@@ -222,3 +222,94 @@ db.birds.updateMany(
 db.podcasts.deleteOne({ _id: Objectid("6282c9862acb966e76bbf20a") })
 
 db.podcasts.deleteMany({category: “crime”})
+
+
+// Return the three music companies with the highest number of employees. Ensure consistent sort order.
+db.companies
+  .find({ category_code: "music" })
+  .sort({ number_of_employees: -1, _id: 1 })
+  .limit(3);
+  
+// Return data on all music companies, sorted alphabetically from A to Z. Ensure consistent sort order
+db.companies.find({ category_code: "music" }).sort({ name: 1, _id: 1 });
+
+// Return data on all music companies, sorted alphabetically from A to Z.
+db.companies.find({ category_code: "music" }).sort({ name: 1 });
+
+
+Return the data on the three most recent sales made from the London store that included one or more of the following items: a laptop, a backpack or printer paper.
+
+db.sales.find({ "items.name": { $in: ["laptop", "backpack", "printer paper"] }, "storeLocation": "London", }).sort({ saleDate: -1, }).limit(3)
+
+
+// Return all restaurant inspections - business name, result, and _id fields only
+db.inspections.find(
+  { sector: "Restaurant - 818" },
+  { business_name: 1, result: 1 }
+)
+
+// Return all inspections with result of "Pass" or "Warning" - exclude date and zip code
+db.inspections.find(
+  { result: { $in: ["Pass", "Warning"] } },
+  { date: 0, "address.zip": 0 }
+)
+
+Returning Specific Data from a Query in MongoDB
+Review the following code, which demonstrates how to return selected fields from a query.
+
+Add a Projection Document
+To specify fields to include or exclude in the result set, add a projection document as the second parameter in the call to db.collection.find().
+
+Syntax:
+
+db.collection.find( <query>, <projection> )
+Include a Field
+To include a field, set its value to 1 in the projection document.
+
+Syntax:
+
+db.collection.find( <query>, { <field> : 1 })
+Example:
+
+// Return all restaurant inspections - business name, result, and _id fields only
+db.inspections.find(
+  { sector: "Restaurant - 818" },
+  { business_name: 1, result: 1 }
+)
+Exclude a Field
+To exclude a field, set its value to 0 in the projection document.
+
+Syntax:
+
+db.collection.find(query, { <field> : 0, <field>: 0 })
+Example:
+
+// Return all inspections with result of "Pass" or "Warning" - exclude date and zip code
+db.inspections.find(
+  { result: { $in: ["Pass", "Warning"] } },
+  { date: 0, "address.zip": 0 }
+)
+While the _id field is included by default, it can be suppressed by setting its value to 0 in any projection.
+
+// Return all restaurant inspections - business name and result fields only
+db.inspections.find(
+  { sector: "Restaurant - 818" },
+  { business_name: 1, result: 1, _id: 0 }
+)
+
+db.sales.find({storeLocation:"Denver"},{storeLocation:1,saleDate:1,purchaseMethod:1});
+
+
+Find the data on sales to customers less than 30 years old in which the customer satisfaction rating was greater than three. Return only the customer's age and satisfaction rating, the sale date and store location. Do not include the _id field. 
+
+
+db.sales.find({ storeLocation: { $in: ["Seattle", "New York"] }, }, { couponUsed: 0, purchaseMethod: 0, customer: 0, })
+
+// Count number of docs in trip collection
+db.trips.countDocuments({})
+// Count number of trips over 120 minutes by subscribers
+db.trips.countDocuments({ tripduration: { $gt: 120 }, usertype: "Subscriber" })
+
+db.sales.countDocuments({storeLocation:"Denver",couponUsed:true});
+db.sales.countDocuments({"item.name":"laptop","item.price": {$lt:600}});
+
