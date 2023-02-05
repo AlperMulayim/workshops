@@ -74,3 +74,81 @@ Item with a writing tag
 db.sales.find({
   $or: [{ "items.name": "pens" }, { "items.tags": "writing" }],
 })
+
+REPLACE THE DOCUMENT. 
+
+db.books.replaceOne(
+  {
+    _id: ObjectId("6282afeb441a74a98dbbec4e"),
+  },
+  {
+    title: "Data Science Fundamentals for Python and MongoDB",
+    isbn: "1484235967",
+    publishedDate: new Date("2018-5-10"),
+    thumbnailUrl:
+      "https://m.media-amazon.com/images/I/71opmUBc2wL._AC_UY218_.jpg",
+    authors: ["David Paper"],
+    categories: ["Data Science"],
+  }
+)
+
+
+Atlas atlas-d3opcw-shard-0 [primary] bird_data> db.birds.find({common_name:"Northern Cardinal"});
+[
+  {
+    _id: ObjectId("6286809e2f3fa87b7d86dccd"),
+    common_name: 'Northern Cardinal',
+    scientific_name: 'Cardinalis cardinalis',
+    wingspan_cm: 25.32,
+    habitat: 'woodlands',
+    diet: [ 'grain', 'seeds', 'fruit' ],
+    last_seen: ISODate("2022-05-19T20:20:44.083Z")
+  }
+]
+Atlas atlas-d3opcw-shard-0 [primary] bird_data> db.birds.replaceOne({_id: ObjectId("6286809e2f3fa87b7d86dccd")}, {
+...   "common_name": "Morning Dove",
+...   "scientific_name": "Zenaida macroura",
+...   "wingspan_cm": 37.23,
+...   "habitat": ["urban areas", "farms", "grassland"],
+...   "diet": ["seeds"],
+... });
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+db.birds.findOne({common_name:"Canada Goose"});
+{
+  _id: ObjectId("6268413c613e55b82d7065d2"),
+  common_name: 'Canada Goose',
+  scientific_name: 'Branta canadensis',
+  wingspan_cm: 152.4,
+  habitat: 'wetlands',
+  diet: [ 'grass', 'algae' ],
+  last_seen: ISODate("2022-05-19T20:20:44.083Z")
+}
+
+
+db.birds.updateOne({common_name:"Canada Goose"},{$set:{tags:["geese","herbivore","migration"]}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+db.birds.findOne({common_name:"Canada Goose"});
+{
+  _id: ObjectId("6268413c613e55b82d7065d2"),
+  common_name: 'Canada Goose',
+  scientific_name: 'Branta canadensis',
+  wingspan_cm: 152.4,
+  habitat: 'wetlands',
+  diet: [ 'grass', 'algae' ],
+  last_seen: ISODate("2022-05-19T20:20:44.083Z"),
+  tags: [ 'geese', 'herbivore', 'migration' ]
+}
