@@ -48,6 +48,7 @@ db.routes.find({
   ]
 })
 
+db.birds.find({"_id" : ObjectId("6268471e613e55b82d7065d7")}) 
 
 db.routes.find({
   $or: [{ dst_airport: "SEA" }, { src_airport: "SEA" }],
@@ -152,3 +153,72 @@ db.birds.findOne({common_name:"Canada Goose"});
   last_seen: ISODate("2022-05-19T20:20:44.083Z"),
   tags: [ 'geese', 'herbivore', 'migration' ]
 }
+
+db.birds.updateOne({"_id" : ObjectId("6268471e613e55b82d7065d7")}, {$push: {diet: ["newts", "opossum", "skunks", "squirrels"]}}) 
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+db.birds.updateOne(
+  {
+    common_name: "Robin Redbreast",
+  },
+  {
+    $inc: {
+      "sightings": 1,
+    },
+    $set: {
+      last_updated: new Date(),
+    },
+  },
+  {
+    upsert: true,
+  }
+)
+
+db.podcasts.findAndModify({
+  query: { _id: ObjectId("6261a92dfee1ff300dc80bf1") },
+  update: { $inc: { subscribers: 1 } },
+  new: true,
+})
+
+ db.birds.findAndModify({query:{common_name:"Blue Jay"}, update: {$inc: {sightings_count:1}}, new: true})
+{
+  _id: ObjectId("628682d92f3fa87b7d86dcce"),
+  common_name: 'Blue Jay',
+  scientific_name: 'Cyanocitta cristata',
+  wingspan_cm: 34.17,
+  habitat: 'forests',
+  diet: [ 'vegetables', 'nuts', 'grains' ],
+  sightings_count: 5,
+  last_seen: ISODate("2022-05-19T20:20:44.083Z")
+}
+
+
+db.books.updateMany(
+  { publishedDate: { $lt: new Date("2019-01-01") } },
+  { $set: { status: "LEGACY" } }
+)
+
+
+db.birds.updateMany(
+  {
+    common_name: {
+      $in: ["Blue Jay", "Grackle"],
+    },
+  },
+  {
+    $set: {
+      last_seen: ISODate("2022-01-01"),
+    },
+  }
+)
+
+db.podcasts.deleteOne({ _id: Objectid("6282c9862acb966e76bbf20a") })
+
+db.podcasts.deleteMany({category: “crime”})
