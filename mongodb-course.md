@@ -313,6 +313,9 @@ db.trips.countDocuments({ tripduration: { $gt: 120 }, usertype: "Subscriber" })
 db.sales.countDocuments({storeLocation:"Denver",couponUsed:true});
 db.sales.countDocuments({"item.name":"laptop","item.price": {$lt:600}});
 
+
+AGGREGATE : 
+
 The following aggregation pipeline finds the documents with a field named "state" that matches a value "CA" and then groups those documents by the group key "$city" and shows the total number of zip codes in the state of California.
 
 db.zips.aggregate([
@@ -326,4 +329,78 @@ db.zips.aggregate([
    }
 }
 ])
+
+db.sightings.aggregate([
+  {
+    $match: {
+        species_common: 'Eastern Bluebird'
+    }
+  }, {
+    $group: {
+        _id: '$location.coordinates',
+        number_of_sightings: {
+            $count: {}
+        }
+    }
+  }
+])
+
+db.zips.aggregate([
+{
+  $sort: {
+    pop: -1
+  },
+  $limit: {
+     5
+  }
+}
+
+db.sightings.aggregate([
+  {
+    $project: {
+        _id: 0,
+        species_common: 1,
+        date: 1
+    }
+  }
+])
+
+db.birds.aggregate([
+  {
+    $set: {
+      'class': 'bird'
+    }
+  }
+])
+
+
+db.sightings.aggregate([
+{
+  $match: {
+    date: {
+      $gt: ISODate('2022-01-01T00:00:00.000Z'),
+      $lt: ISODate('2023-01-01T00:00:00.000Z')
+    },
+    species_common: 'Eastern Bluebird'
+  }
+}, {
+  $count: 'bluebird_sightings_2022'
+}
+])
+
+db.sightings.aggregate([
+  {
+    $match: {
+      date: {
+        $gte: ISODate('2022-01-01T00:00:00.0Z'),
+        $lt: ISODate('2023-01-01T00:00:00.0Z')
+      }
+    }
+  },
+  {
+    $out: 'sightings_2022'
+  }
+])
+db.sightings_2022.findOne()
+
 
