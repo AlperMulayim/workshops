@@ -499,3 +499,127 @@ SEARCH INDEX:
     }
   }
 ])
+
+$search {
+  "compound": {
+    "must": [{
+      "text": {
+        "query": "field",
+        "path": "habitat"
+      }
+    }],
+    "should": [{
+      "range": {
+        "gte": 45,
+        "path": "wingspan_cm",
+        "score": {"constant": {"value": 5}}
+      }
+    }]
+  }
+}
+
+db.sales.aggregate([
+  {
+    $search: {
+      index: 'sample_supplies-sales-dynamic',
+      "compound": {
+        "filter": [
+          {
+            "text": {
+              "query": "Online",
+              "path": "purchaseMethod"
+            }
+          }
+        ]
+      }
+    }
+  }
+]
+
+$searchMeta: {
+    "facet": {
+        "operator": {
+            "text": {
+            "query": ["Northern Cardinal"],
+            "path": "common_name"
+            }
+        },
+        "facets": {
+            "sightingWeekFacet": {
+                "type": "date",
+                "path": "sighting",
+                "boundaries": [ISODate("2022-01-01"), 
+                    ISODate("2022-01-08"),
+                    ISODate("2022-01-15"),
+                    ISODate("2022-01-22")],
+                "default" : "other"
+            }
+        }
+    }
+}
+
+db.sales.aggregate([
+  {
+    $search: {
+      index: 'sample_supplies-sales-dynamic',
+      "compound": {
+        "filter": [
+          {
+            "text": {
+              "query": "Online",
+              "path": "purchaseMethod"
+            }
+          }
+        ],
+        "should": [
+          {
+            "text": {
+              "query": "notepad",
+              "path": "items",
+              "score": { "constant": {"value": 5} }
+            }
+          }
+      ]
+      }
+    }
+  }
+])
+
+
+SEARCH INDEX CREATE: 
+JSON FILE: 
+
+  {
+      "name": "sample_supplies-sales-facets",
+      "searchAnalyzer": "lucene.standard",
+      "analyzer": "lucene.standard",
+      "collectionName": "sales",
+      "database": "sample_supplies",
+      "mappings": {
+        "dynamic": true,
+        "fields": {
+          "purchaseMethod": [
+            {
+              "dynamic": true,
+              "type": "document"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "storeLocation": [
+            {
+              "dynamic": true,
+              "type": "document"
+            },
+            {
+              "type": "stringFacet"
+            }
+          ]
+        }
+      }
+  }
+  
+  atlas clusters search indexes create --clusterName myAtlasClusterEDU -f /app/search_index.json
+  
+  
