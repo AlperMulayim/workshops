@@ -469,3 +469,33 @@ db.accounts.explain().find({ account_holder: "Andrea", balance:{ $gt :5 }}, { ac
 db.customers.dropIndex(
   'active_1_birthdate_-1_name_1'
 )
+
+
+ATLAS SEARCH 
+SEARCH INDEX: 
+
+    {
+        "name": "sample_supplies-sales-dynamic",
+        "searchAnalyzer": "lucene.standard",
+        "analyzer": "lucene.standard",
+        "collectionName": "sales",
+        "database": "sample_supplies",
+        "mappings": {
+            "dynamic": true
+        }
+    }
+    
+    atlas clusters search indexes create --clusterName myAtlasClusterEDU -f /app/search_index.json
+    atlas clusters search indexes list --clusterName myAtlasClusterEDU --db sample_supplies --collection sales
+    
+    
+ db.sales.aggregate([
+  {
+    $search: {
+      index: 'sample_supplies-sales-dynamic',
+      text: {
+        query: 'notepad', path: { 'wildcard': '*' }
+      }
+    }
+  }
+])
