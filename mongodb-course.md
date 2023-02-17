@@ -404,3 +404,68 @@ db.sightings.aggregate([
 db.sightings_2022.findOne()
 
 
+INDEXES: 
+
+db.accounts.getIndexes()
+db.accounts.createIndex({account_id: 1})
+
+
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  {
+    v: 2,
+    key: { 'transfers complete': 1 },
+    name: 'transfers complete_1'
+  },
+  {
+    v: 2,
+    key: { last_updated: 1 },
+    name: 'last_updated_1',
+    expireAfterSeconds: 3600
+  },
+  { v: 2, key: { account_id: 1 }, name: 'account_id_1' }
+]
+
+db.accounts.explain().find({account_id:"ABC123"});
+
+// create a multikey index on the `transfers_complete` field:
+db.accounts.createIndex({ transfers_complete: 1 })
+
+// use the explain followed by the find method to view the winningPlan for a query that finds a specific `completed_transfers` array element
+db.accounts.explain().find({ transfers_complete: { $in: ["TR617907396"] } })
+
+
+// create a compound index using the `account_holder`, `balance` and `account_type` fields:
+db.accounts.createIndex({ account_holder: 1, balance: 1, account_type: 1 })
+
+// Use the explain method to view the winning plan for a query
+db.accounts.explain().find({ account_holder: "Andrea", balance:{ $gt :5 }}, { account_holder: 1, balance: 1, account_type:1, _id: 0}).sort({ balance: 1 })
+
+{
+  winningPlan: {
+      stage: 'PROJECTION_COVERED',
+      transformBy: { account_holder: 1, balance: 1, account_type: 1, _id: 0 },
+      inputStage: {
+        stage: 'IXSCAN',
+        keyPattern: { account_holder: 1, balance: 1, account_type: 1 },
+        indexName: 'account_holder_1_balance_1_account_type_1',
+        isMultiKey: false,
+        multiKeyPaths: { account_holder: [], balance: [], account_type: [] },
+        isUnique: false,
+        isSparse: false,
+        isPartial: false,
+        indexVersion: 2,
+        direction: 'forward',
+        indexBounds: {
+          account_holder: [ '["Andrea", "Andrea"]' ],
+          balance: [ '(5, inf.0]' ],
+          account_type: [ '[MinKey, MaxKey]' ]
+        }
+      }
+    },
+    rejectedPlans: []
+}
+
+db.customers.dropIndex(
+  'active_1_birthdate_-1_name_1'
+)
