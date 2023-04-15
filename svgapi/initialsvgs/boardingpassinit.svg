@@ -1,0 +1,268 @@
+<svg width="1341" height="447" viewBox="0 0 1341 447" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1341" height="447" fill="#E5E5E5"/>
+<g id="Initial">
+<rect width="1448" height="712" transform="translate(0 -123)" fill="white"/>
+<g id="Group 1">
+<g id="Long Boarding Pass">
+<g id="Boarding Pass Border">
+<g id="Pass Border" filter="url(#filter0_d_0_1)">
+<rect x="10" y="6.00003" width="1137" height="427" rx="60" fill="white"/>
+</g>
+<path id="Side Strip" d="M10 66C10 32.8629 36.8629 6 70 6H240.037V433H70C36.8629 433 10 406.137 10 373V66Z" fill="#204A62"/>
+</g>
+<g id="Passenger">
+<text id="Passenger Name" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="295.025" y="152.914">Passenger Name</tspan></text>
+<text id="LINDA CORNWALL" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="294.642" y="190.341">LINDA CORNWALL</tspan></text>
+</g>
+<g id="Departure Date/Time">
+<g id="Flight Date">
+<text id="5/22/22" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="294.642" y="280.715">5/22/22</tspan></text>
+<text id="Flight Date_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="295.025" y="244.111">Flight Date</tspan></text>
+</g>
+<g id="Flight Time">
+<text id="1145" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="512.295" y="280.715">1145</tspan></text>
+<text id="Flight Time_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="512.678" y="244.111">Flight Time</tspan></text>
+</g>
+</g>
+<g id="Airplane Info" filter="url(#filter1_d_0_1)">
+<rect id="Rectangle 1" x="670.916" y="114.422" width="229.902" height="288.226" rx="20" fill="#F4F4F4"/>
+<g id="Seat #">
+<text id="21E" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="379.426">21E</tspan></text>
+<text id="Seat No." fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="378.18">Seat No.</tspan></text>
+</g>
+<g id="Class">
+<text id="A" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="344.713">A</tspan></text>
+<text id="Class_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="343.467">Class</tspan></text>
+</g>
+<g id="Terminal">
+<text id="2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="293.253">2</tspan></text>
+<text id="Terminal_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="290.99">Terminal</tspan></text>
+</g>
+<g id="Boarding Time">
+<text id="1045" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="701.559" y="185.129">1045</tspan></text>
+<text id="Boarding time" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.941" y="146.652">Boarding time</tspan></text>
+</g>
+<g id="Gate">
+<text id="D" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.297" y="261.44">D</tspan></text>
+<text id="Gate_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="257.91">Gate</tspan></text>
+</g>
+</g>
+<g id="QR Code" clip-path="url(#clip0_0_1)">
+<path id="Vector" d="M1225.81 19.3925H816.76V344.613H1225.81V19.3925Z" fill="white"/>
+</g>
+<g id="Airline Boarding Pass Info">
+<g id="Logo">
+<g id="DRIVEN AIRLINES">
+<path d="M98.7811 300.03L98.7811 296.286C97.5626 295.509 95.7871 294.899 93.4546 294.455C91.1221 293.984 88.807 293.748 86.5093 293.748C81.0436 293.748 77.0574 294.566 74.5508 296.202L74.5508 300.03L98.7811 300.03ZM104.839 305.687L68.2844 305.687L68.2844 293.623C72.6709 289.685 78.624 287.716 86.1438 287.716C93.6287 287.716 99.8603 289.56 104.839 293.249L104.839 305.687Z" fill="white"/>
+<path d="M68.2844 284.481L68.2844 273.416C69.0155 271.668 70.3732 270.185 72.3576 268.964C74.3071 267.717 76.7093 267.093 79.564 267.093C84.229 267.093 87.6582 268.562 89.8514 271.502L104.839 267.301L104.839 273.124L91.5225 276.66L91.5225 278.865L104.839 278.865L104.839 284.481L68.2844 284.481ZM74.5508 278.865L85.6738 278.865L85.6738 275.288C85.5345 274.816 84.9427 274.303 83.8983 273.748C82.8191 273.166 81.5658 272.875 80.1384 272.875C78.7111 272.875 77.4578 273.124 76.3786 273.624C75.2993 274.095 74.6901 274.567 74.5508 275.038L74.5508 278.865Z" fill="white"/>
+<path d="M104.839 264.088L68.2844 264.088L68.2844 258.388L104.839 258.388L104.839 264.088Z" fill="white"/>
+<path d="M68.2844 236.532L104.839 242.439L104.839 250.26L68.2844 256.167L68.2844 250.177L85.2038 247.889L96.1701 246.474L96.1701 246.225L85.2038 244.81L68.2844 242.522L68.2844 236.532Z" fill="white"/>
+<path d="M104.839 234.31L68.2844 234.31L68.2844 219.375L74.5508 219.375L74.5508 228.611L83.2716 228.611L83.2716 220.374L89.3292 220.374L89.3292 228.611L98.7811 228.611L98.7811 219.209L104.839 219.209L104.839 234.31Z" fill="white"/>
+<path d="M104.839 203.009L84.6294 210.788L84.7338 210.996L90.8958 210.747L104.839 210.747L104.839 215.988L68.2844 215.988L68.2844 211.786L89.277 204.132L89.1725 203.924L82.7494 204.382L68.2844 204.382L68.2844 199.14L104.839 199.14L104.839 203.009Z" fill="white"/>
+<path d="M104.839 176.088L99.0422 176.962L99.0422 183.535L104.839 184.408L104.839 190.066L68.2844 184.45L68.2844 175.839L104.839 170.514L104.839 176.088ZM75.073 180.332L87.2404 181.954L93.4546 182.869L93.4546 177.669L87.2404 178.626L75.073 180.248L75.073 180.332Z" fill="white"/>
+<path d="M104.839 168.092L68.2844 168.092L68.2844 162.392L104.839 162.392L104.839 168.092Z" fill="white"/>
+<path d="M68.2844 158.382L68.2844 147.317C69.0155 145.57 70.3732 144.086 72.3576 142.866C74.3071 141.618 76.7093 140.994 79.564 140.994C84.229 140.994 87.6581 142.464 89.8514 145.403L104.839 141.202L104.839 147.026L91.5225 150.562L91.5225 152.766L104.839 152.766L104.839 158.382L68.2844 158.382ZM74.5508 152.766L85.6738 152.766L85.6738 149.189C85.5345 148.717 84.9427 148.204 83.8983 147.65C82.8191 147.067 81.5658 146.776 80.1384 146.776C78.7111 146.776 77.4578 147.026 76.3785 147.525C75.2993 147.996 74.6901 148.468 74.5508 148.939L74.5508 152.766Z" fill="white"/>
+<path d="M104.839 137.989L68.2844 137.989L68.2844 132.29L98.7811 132.29L98.7811 123.637L104.839 123.637L104.839 137.989Z" fill="white"/>
+<path d="M104.839 120.805L68.2844 120.805L68.2844 115.105L104.839 115.105L104.839 120.805Z" fill="white"/>
+<path d="M104.839 98.1162L84.6294 105.895L84.7338 106.103L90.8958 105.854L104.839 105.854L104.839 111.095L68.2844 111.095L68.2844 106.894L89.277 99.2394L89.1725 99.0314L82.7494 99.489L68.2844 99.489L68.2844 94.2475L104.839 94.2475L104.839 98.1162Z" fill="white"/>
+<path d="M104.839 90.2549L68.2844 90.2549L68.2844 75.3206L74.5508 75.3206L74.5508 84.5557L83.2716 84.5557L83.2716 76.319L89.3292 76.319L89.3292 84.5557L98.7811 84.5557L98.7811 75.1542L104.839 75.1542L104.839 90.2549Z" fill="white"/>
+<path d="M68.2844 69.677L68.2844 59.6931L74.5508 59.6931L74.5508 67.6803L74.8642 67.805L90.1125 61.1491C93.1761 59.7902 95.5086 59.1107 97.11 59.1107C100.626 59.1107 103.202 60.0398 104.839 61.8979L104.839 72.9218L98.7811 72.9218L98.7811 64.3107L98.4678 64.1859L81.6006 71.6738C79.1636 72.7554 77.1793 73.2962 75.6475 73.2962C72.0268 73.2962 69.5725 72.0898 68.2844 69.677Z" fill="white"/>
+</g>
+<g id="AirplaneTilt">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M93.7079 345.115C93.7614 345.145 93.8139 345.176 93.8651 345.209L105.547 352.631C106.518 353.249 106.851 354.194 106.394 355.039L95.9659 374.295L99.9287 376.956L114.396 362.384C114.953 361.823 115.857 361.458 116.857 361.392C117.858 361.325 118.85 361.563 119.561 362.041L127.93 367.661C128.559 368.083 128.913 368.656 128.913 369.254L128.913 373.94L132.474 376.332L135.662 369.986C135.997 369.32 136.774 368.797 137.765 368.571L147.262 366.41L143.694 364.015L136.715 364.015C135.77 364.015 134.868 363.747 134.232 363.277L126.561 357.611C125.907 357.128 125.597 356.479 125.711 355.832C125.824 355.184 126.349 354.601 127.151 354.234L148.218 344.574L144.222 341.891L115.545 348.893C114.285 349.201 112.873 348.975 111.954 348.319L101.066 340.545C100.14 339.973 98.9246 339.653 97.6607 339.653C96.3274 339.653 95.0487 340.009 94.1059 340.642C93.1631 341.275 92.6334 342.134 92.6334 343.029C92.6334 343.789 93.0154 344.523 93.7079 345.115ZM105.497 337.159C103.349 335.866 100.56 335.146 97.6607 335.146C94.5472 335.146 91.5612 335.977 89.3596 337.455C87.158 338.933 85.9212 340.938 85.9212 343.029C85.9212 345.12 87.158 347.125 89.3596 348.603C89.5321 348.719 89.7191 348.82 89.9168 348.905L99.333 354.888L88.9274 374.104C88.4818 374.926 88.7863 375.848 89.7083 376.467L98.0772 382.087C98.7882 382.564 99.7804 382.803 100.781 382.736C101.782 382.67 102.685 382.305 103.243 381.744L117.71 367.172L122.201 370.188L122.201 374.874C122.201 375.471 122.554 376.045 123.184 376.467L131.553 382.087C132.374 382.638 133.561 382.865 134.691 382.688C135.821 382.51 136.735 381.952 137.106 381.214L141.492 372.482L154.53 369.515C155.629 369.265 156.458 368.652 156.721 367.893C156.985 367.135 156.647 366.338 155.826 365.787L147.457 360.168C146.828 359.745 145.974 359.508 145.084 359.508L138.2 359.508L134.122 356.495L155.346 346.763C156.171 346.385 156.702 345.78 156.795 345.112C156.888 344.444 156.533 343.783 155.826 343.309L147.457 337.689C146.535 337.07 145.163 336.865 143.937 337.165L115.329 344.15L106.198 337.631C106.125 337.57 106.046 337.511 105.962 337.455L105.753 337.314C105.67 337.259 105.585 337.207 105.497 337.159Z" fill="white"/>
+</g>
+</g>
+<g id="Boarding Pass Class">
+<text id="BOARDING PASS" transform="translate(169.946 378.32) rotate(-90)" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="26" letter-spacing="0em"><tspan x="0" y="27.88">BOARDING </tspan><tspan x="0" y="63.88">PASS</tspan></text>
+<text id="ECONOMY" transform="translate(169.946 138.874) rotate(-90)" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="26" letter-spacing="0em"><tspan x="30.5813" y="27.88">ECON</tspan><tspan x="39.5696" y="63.88">OMY</tspan></text>
+</g>
+</g>
+<g id="Barcode">
+<rect id="Rectangle 2" x="290.645" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 7" x="346.724" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 12" x="400.022" y="331.39" width="11.1252" height="53.6791" fill="black"/>
+<rect id="Rectangle 3" x="299.636" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 8" x="358.496" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 13" x="417.357" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 4" x="311.408" y="331.39" width="11.1252" height="53.6791" fill="black"/>
+<rect id="Rectangle 9" x="367.487" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 14" x="426.347" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 5" x="328.743" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 10" x="379.259" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 15" x="438.119" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 6" x="337.734" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 11" x="391.031" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 16" x="449.892" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 2_2" x="458.882" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 7_2" x="514.962" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 12_2" x="568.259" y="331.39" width="11.1252" height="53.6791" fill="black"/>
+<rect id="Rectangle 3_2" x="467.873" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 8_2" x="526.734" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 13_2" x="585.594" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 4_2" x="479.645" y="331.39" width="11.1252" height="53.6791" fill="black"/>
+<rect id="Rectangle 9_2" x="535.724" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 14_2" x="594.585" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 5_2" x="496.98" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 10_2" x="547.496" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 15_2" x="606.357" y="331.39" width="5.56262" height="53.6791" fill="black"/>
+<rect id="Rectangle 6_2" x="505.971" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 11_2" x="559.269" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+<rect id="Rectangle 16_2" x="618.129" y="331.39" width="2.78131" height="53.6791" fill="black"/>
+</g>
+<g id="Departure / Arrival Info">
+<g id="Flight #">
+<text id="Flight No." fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="793.478" y="45.7752">Flight No.</tspan></text>
+<text id="AP913" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" font-weight="bold" letter-spacing="0em"><tspan x="775.49" y="92.1672">AP913</tspan></text>
+</g>
+<g id="Departure">
+<text id="Departing from" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="800" letter-spacing="0em"><tspan x="292.04" y="45.32">Departing from</tspan></text>
+<text id="LAX" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" letter-spacing="0em"><tspan x="310.606" y="91.7125">LAX</tspan></text>
+</g>
+<g id="Arrival">
+<text id="Arriving at" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="800" letter-spacing="0em"><tspan x="493.26" y="45.32">Arriving at</tspan></text>
+<text id="JFK" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" letter-spacing="0em"><tspan x="501.034" y="91.7125">JFK</tspan></text>
+</g>
+<g id="AirplaneInFlight">
+<path id="Vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M423.453 86.0216C423.453 85.5033 424.078 85.0831 424.849 85.0831H447.714C448.485 85.0831 449.109 85.5033 449.109 86.0216C449.109 86.5399 448.485 86.96 447.714 86.96H424.849C424.078 86.96 423.453 86.5399 423.453 86.0216Z" fill="black"/>
+<path id="Vector (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M428.055 69.8769L429.984 73.7666C430.126 74.0528 430.054 74.3674 429.792 74.6121C429.53 74.8568 429.108 75.0018 428.66 75.0018H423.579C423.164 75.0018 422.772 74.8781 422.506 74.6641L419.749 72.4393H417.834L420.025 77.338C420.252 77.8477 420.718 78.2951 421.353 78.6131C421.987 78.931 422.757 79.1031 423.548 79.1041H450.129V77.48C450.129 76.8228 449.741 76.1924 449.05 75.7277C448.358 75.2629 447.421 75.0018 446.444 75.0018H437.552C437.16 75.0018 436.787 74.8914 436.523 74.6975L429.951 69.8769H428.055ZM417.674 70.5625H420.403C420.817 70.5625 421.21 70.6862 421.475 70.9001L424.232 73.1249H426.723L425.349 70.3528C425.217 70.0835 425.183 69.7971 425.247 69.517C425.312 69.2369 425.475 68.9711 425.722 68.7415C425.969 68.5119 426.294 68.325 426.669 68.1961C427.045 68.0672 427.46 68 427.882 68H430.565C430.956 68 431.33 68.1104 431.594 68.3043L438.166 73.1249H446.444C448.161 73.1249 449.809 73.5838 451.023 74.4005C452.238 75.2172 452.92 76.325 452.92 77.48V80.0425C452.92 80.5608 452.295 80.9809 451.525 80.9809L423.545 80.9809C422.154 80.9795 420.8 80.677 419.685 80.1181C418.57 79.5593 417.752 78.774 417.352 77.8783L415.113 72.8708C414.993 72.6025 414.968 72.3186 415.041 72.0427C415.113 71.7668 415.281 71.5061 415.531 71.2817C415.78 71.0573 416.104 70.8754 416.477 70.7504C416.849 70.6259 417.259 70.5616 417.674 70.5625Z" fill="black"/>
+</g>
+</g>
+</g>
+<g id="Short Boarding Pass">
+<g id="Short Pass Border">
+<rect id="Rectangle 17" x="987" y="6" width="354" height="427" rx="60" fill="white"/>
+<path id="Rectangle 18" d="M987 66C987 32.8629 1013.86 6 1047 6H1281C1314.14 6 1341 32.8629 1341 66V77.4651H987V66Z" fill="#204A62"/>
+</g>
+<g id="Logo_2">
+<g id="DRIVEN AIRLINES_2">
+<path d="M1126.79 32.4101H1128.47C1128.82 32.0551 1129.09 31.5378 1129.29 30.8583C1129.5 30.1787 1129.61 29.5042 1129.61 28.8347C1129.61 27.2423 1129.24 26.0809 1128.51 25.3506H1126.79V32.4101ZM1124.26 34.175V23.5249H1129.66C1131.43 24.8029 1132.31 26.5374 1132.31 28.7282C1132.31 30.909 1131.48 32.7246 1129.83 34.175H1124.26Z" fill="white"/>
+<path d="M1133.76 23.5249H1138.71C1139.49 23.7379 1140.16 24.1335 1140.7 24.7116C1141.26 25.2796 1141.54 25.9795 1141.54 26.8112C1141.54 28.1704 1140.88 29.1695 1139.57 29.8085L1141.45 34.175H1138.84L1137.26 30.2953H1136.27V34.175H1133.76V23.5249ZM1136.27 25.3506V28.5913H1137.87C1138.08 28.5507 1138.31 28.3783 1138.56 28.074C1138.82 27.7596 1138.95 27.3944 1138.95 26.9786C1138.95 26.5627 1138.84 26.1976 1138.62 25.8831C1138.41 25.5687 1138.2 25.3912 1137.98 25.3506H1136.27Z" fill="white"/>
+<path d="M1142.89 34.175V23.5249H1145.44V34.175H1142.89Z" fill="white"/>
+<path d="M1155.23 23.5249L1152.58 34.175H1149.08L1146.43 23.5249H1149.12L1150.14 28.4544L1150.77 31.6494H1150.89L1151.52 28.4544L1152.54 23.5249H1155.23Z" fill="white"/>
+<path d="M1156.22 34.175V23.5249H1162.91V25.3506H1158.77V27.8914H1162.46V29.6563H1158.77V32.4101H1162.98V34.175H1156.22Z" fill="white"/>
+<path d="M1170.24 34.175L1166.75 28.287L1166.66 28.3174L1166.77 30.1127V34.175H1164.42V23.5249H1166.31L1169.73 29.6411L1169.83 29.6107L1169.62 27.7393V23.5249H1171.97V34.175H1170.24Z" fill="white"/>
+<path d="M1182.29 34.175L1181.9 32.4862H1178.96L1178.56 34.175H1176.03L1178.55 23.5249H1182.4L1184.79 34.175H1182.29ZM1180.39 25.5028L1179.66 29.0477L1179.25 30.8583H1181.58L1181.15 29.0477L1180.43 25.5028H1180.39Z" fill="white"/>
+<path d="M1185.87 34.175V23.5249H1188.42V34.175H1185.87Z" fill="white"/>
+<path d="M1190.22 23.5249H1195.17C1195.96 23.7379 1196.62 24.1335 1197.17 24.7116C1197.72 25.2796 1198 25.9795 1198 26.8112C1198 28.1704 1197.35 29.1695 1196.03 29.8085L1197.91 34.175H1195.3L1193.72 30.2953H1192.73V34.175H1190.22V23.5249ZM1192.73 25.3506V28.5913H1194.33C1194.55 28.5507 1194.78 28.3783 1195.02 28.074C1195.28 27.7596 1195.41 27.3944 1195.41 26.9786C1195.41 26.5627 1195.3 26.1976 1195.08 25.8831C1194.87 25.5687 1194.66 25.3912 1194.45 25.3506H1192.73Z" fill="white"/>
+<path d="M1199.35 34.175V23.5249H1201.9V32.4101H1205.78V34.175H1199.35Z" fill="white"/>
+<path d="M1207.04 34.175V23.5249H1209.6V34.175H1207.04Z" fill="white"/>
+<path d="M1217.2 34.175L1213.72 28.287L1213.63 28.3174L1213.74 30.1127V34.175L1211.39 34.175V23.5249H1213.27L1216.7 29.6411L1216.79 29.6107L1216.59 27.7393V23.5249H1218.94V34.175H1217.2Z" fill="white"/>
+<path d="M1220.72 34.175V23.5249H1227.41V25.3506H1223.27V27.8914H1226.96V29.6563H1223.27V32.4101H1227.48V34.175H1220.72Z" fill="white"/>
+<path d="M1229.94 23.5249H1234.41V25.3506H1230.83L1230.78 25.4419L1233.76 29.8845C1234.36 30.7771 1234.67 31.4567 1234.67 31.9233C1234.67 32.9477 1234.25 33.6983 1233.42 34.175H1228.48V32.4101H1232.34L1232.4 32.3188L1229.04 27.4046C1228.56 26.6946 1228.32 26.1164 1228.32 25.6701C1228.32 24.6153 1228.86 23.9002 1229.94 23.5249Z" fill="white"/>
+</g>
+<g id="AirplaneTilt_2">
+<path id="Vector (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M1109.9 22.1268C1109.89 22.1397 1109.87 22.1524 1109.86 22.1647L1106.59 24.9853C1106.32 25.2198 1105.9 25.3002 1105.53 25.1898L1097.05 22.672L1095.88 23.6288L1102.3 27.1218C1102.54 27.2565 1102.7 27.4746 1102.73 27.7162C1102.76 27.9578 1102.66 28.1974 1102.45 28.3691L1099.97 30.3897C1099.79 30.5417 1099.54 30.6271 1099.27 30.6271H1097.21L1096.16 31.487L1098.95 32.2567C1099.24 32.3374 1099.47 32.5252 1099.57 32.7644L1100.52 35.0573L1101.58 34.196V32.5109C1101.58 32.2826 1101.7 32.0649 1101.9 31.9113L1104.4 30.0591C1104.61 29.9014 1104.9 29.8265 1105.18 29.8539C1105.47 29.8812 1105.72 30.0081 1105.88 30.2017L1110.14 35.2882L1111.32 34.3235L1108.23 27.3994C1108.1 27.0951 1108.2 26.7541 1108.49 26.5322L1111.91 23.9033C1112.16 23.6797 1112.3 23.3864 1112.3 23.0812C1112.3 22.7592 1112.15 22.4505 1111.87 22.2229C1111.59 21.9952 1111.21 21.8673 1110.82 21.8673C1110.48 21.8673 1110.16 21.9596 1109.9 22.1268ZM1113.4 24.9732C1113.97 24.4546 1114.29 23.7813 1114.29 23.0812C1114.29 22.3294 1113.92 21.6085 1113.27 21.0769C1112.62 20.5453 1111.74 20.2467 1110.82 20.2467C1109.9 20.2467 1109.01 20.5453 1108.36 21.0769C1108.31 21.1185 1108.27 21.1637 1108.23 21.2114L1105.6 23.485L1097.14 20.9725C1096.77 20.8649 1096.37 20.9385 1096.1 21.1611L1093.62 23.1817C1093.41 23.3534 1093.31 23.593 1093.34 23.8346C1093.37 24.0762 1093.53 24.2943 1093.77 24.429L1100.19 27.922L1098.86 29.0064H1096.8C1096.53 29.0064 1096.28 29.0918 1096.1 29.2437L1093.62 31.2644C1093.38 31.4626 1093.28 31.7492 1093.36 32.0222C1093.44 32.2951 1093.68 32.5156 1094.01 32.6052L1097.85 33.6642L1099.16 36.8124C1099.27 37.0777 1099.54 37.2777 1099.87 37.3414C1100.2 37.4051 1100.56 37.3233 1100.8 37.1253L1103.27 35.1046C1103.46 34.9526 1103.56 34.7465 1103.56 34.5316V32.8694L1104.89 31.8847L1109.17 37.0092C1109.34 37.2084 1109.61 37.3367 1109.9 37.3591C1110.19 37.3815 1110.48 37.2958 1110.69 37.1253L1113.17 35.1046C1113.44 34.882 1113.53 34.5506 1113.4 34.2547L1110.32 27.3472L1113.19 25.1426C1113.22 25.1248 1113.25 25.1058 1113.27 25.0855L1113.33 25.035C1113.36 25.0151 1113.38 24.9945 1113.4 24.9732Z" fill="white"/>
+</g>
+</g>
+<g id="Barcode_2">
+<rect id="Rectangle 2_3" x="1070.25" y="210.804" width="1.58542" height="47.0253" transform="rotate(90 1070.25 210.804)" fill="black"/>
+<rect id="Rectangle 7_3" x="1070.25" y="242.771" width="3.17085" height="47.0253" transform="rotate(90 1070.25 242.771)" fill="black"/>
+<rect id="Rectangle 12_3" x="1070.25" y="273.152" width="6.34169" height="47.0253" transform="rotate(90 1070.25 273.152)" fill="black"/>
+<rect id="Rectangle 3_3" x="1070.25" y="215.929" width="3.17085" height="47.0253" transform="rotate(90 1070.25 215.929)" fill="black"/>
+<rect id="Rectangle 8_3" x="1070.25" y="249.481" width="1.58542" height="47.0253" transform="rotate(90 1070.25 249.481)" fill="black"/>
+<rect id="Rectangle 13_3" x="1070.25" y="283.033" width="1.58542" height="47.0253" transform="rotate(90 1070.25 283.033)" fill="black"/>
+<rect id="Rectangle 4_3" x="1070.25" y="222.639" width="6.34169" height="47.0253" transform="rotate(90 1070.25 222.639)" fill="black"/>
+<rect id="Rectangle 9_3" x="1070.25" y="254.606" width="3.17085" height="47.0253" transform="rotate(90 1070.25 254.606)" fill="black"/>
+<rect id="Rectangle 14_3" x="1070.25" y="288.158" width="3.17085" height="47.0253" transform="rotate(90 1070.25 288.158)" fill="black"/>
+<rect id="Rectangle 5_3" x="1070.25" y="232.521" width="1.58542" height="47.0253" transform="rotate(90 1070.25 232.521)" fill="black"/>
+<rect id="Rectangle 10_3" x="1070.25" y="261.316" width="3.17085" height="47.0253" transform="rotate(90 1070.25 261.316)" fill="black"/>
+<rect id="Rectangle 15_3" x="1070.25" y="294.868" width="3.17085" height="47.0253" transform="rotate(90 1070.25 294.868)" fill="black"/>
+<rect id="Rectangle 6_3" x="1070.25" y="237.646" width="1.58542" height="47.0253" transform="rotate(90 1070.25 237.646)" fill="black"/>
+<rect id="Rectangle 11_3" x="1070.25" y="268.027" width="1.58542" height="47.0253" transform="rotate(90 1070.25 268.027)" fill="black"/>
+<rect id="Rectangle 16_3" x="1070.25" y="301.579" width="1.58542" height="47.0253" transform="rotate(90 1070.25 301.579)" fill="black"/>
+<rect id="Rectangle 2_4" x="1070.25" y="306.704" width="1.58542" height="47.0253" transform="rotate(90 1070.25 306.704)" fill="black"/>
+<rect id="Rectangle 7_4" x="1070.25" y="338.67" width="3.17085" height="47.0253" transform="rotate(90 1070.25 338.67)" fill="black"/>
+<rect id="Rectangle 12_4" x="1070.25" y="369.052" width="6.34169" height="47.0253" transform="rotate(90 1070.25 369.052)" fill="black"/>
+<rect id="Rectangle 3_4" x="1070.25" y="311.829" width="3.17085" height="47.0253" transform="rotate(90 1070.25 311.829)" fill="black"/>
+<rect id="Rectangle 8_4" x="1070.25" y="345.381" width="1.58542" height="47.0253" transform="rotate(90 1070.25 345.381)" fill="black"/>
+<rect id="Rectangle 13_4" x="1070.25" y="378.933" width="1.58542" height="47.0253" transform="rotate(90 1070.25 378.933)" fill="black"/>
+<rect id="Rectangle 4_4" x="1070.25" y="318.539" width="6.34169" height="47.0253" transform="rotate(90 1070.25 318.539)" fill="black"/>
+<rect id="Rectangle 9_4" x="1070.25" y="350.506" width="3.17085" height="47.0253" transform="rotate(90 1070.25 350.506)" fill="black"/>
+<rect id="Rectangle 14_4" x="1070.25" y="384.058" width="3.17085" height="47.0253" transform="rotate(90 1070.25 384.058)" fill="black"/>
+<rect id="Rectangle 5_4" x="1070.25" y="328.42" width="1.58542" height="47.0253" transform="rotate(90 1070.25 328.42)" fill="black"/>
+<rect id="Rectangle 10_4" x="1070.25" y="357.216" width="3.17085" height="47.0253" transform="rotate(90 1070.25 357.216)" fill="black"/>
+<rect id="Rectangle 15_4" x="1070.25" y="390.768" width="3.17085" height="47.0253" transform="rotate(90 1070.25 390.768)" fill="black"/>
+<rect id="Rectangle 6_4" x="1070.25" y="333.545" width="1.58542" height="47.0253" transform="rotate(90 1070.25 333.545)" fill="black"/>
+<rect id="Rectangle 11_4" x="1070.25" y="363.927" width="1.58542" height="47.0253" transform="rotate(90 1070.25 363.927)" fill="black"/>
+<rect id="Rectangle 16_4" x="1070.25" y="397.479" width="1.58542" height="47.0253" transform="rotate(90 1070.25 397.479)" fill="black"/>
+</g>
+<text id="ECONOMY_2" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="26" letter-spacing="0em"><tspan x="1118.65" y="67.582">ECONOMY</tspan></text>
+<g id="Passenger Info">
+<text id="Passenger Name_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="218.307">Passenger Name</tspan></text>
+<text id="LINDA CORNWALL_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1110.18" y="245.219">LINDA CORNWALL</tspan></text>
+</g>
+<g id="Boarding + Seat Info">
+<path id="Rectangle 19" d="M1093.74 264.487H1295.25C1309.06 264.487 1320.25 275.68 1320.25 289.487V374.064C1320.25 387.871 1309.06 399.064 1295.25 399.064H1093.74V264.487Z" fill="#F4F4F4"/>
+<g id="Boarding Info">
+<g id="Boarding Info_2">
+<text id="Boarding Time_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="293.152">Boarding Time</tspan></text>
+<text id="1045_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1110.18" y="320.064">1045</tspan></text>
+</g>
+<g id="Airport Info">
+<g id="Terminal #">
+<text id="Terminal_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1214.34" y="293.555">Terminal</tspan></text>
+<text id="2_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1279.44" y="294.793">2</tspan></text>
+</g>
+<g id="Gate #">
+<text id="Gate_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1214.34" y="318.826">Gate</tspan></text>
+<text id="D_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1279.44" y="320.064">D</tspan></text>
+</g>
+</g>
+</g>
+<g id="Seat Info">
+<g id="Class #">
+<text id="Class_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="361.836">Class</tspan></text>
+<text id="A_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1181.79" y="363.073">A</tspan></text>
+</g>
+<g id="Seat #_2">
+<text id="Seat No._2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="384.878">Seat No.</tspan></text>
+<text id="21E_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1181.79" y="386.116">21E</tspan></text>
+</g>
+</g>
+</g>
+<g id="Flight Date_3">
+<text id="Flight Date_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1048.26" y="158.665">Flight Date</tspan></text>
+<text id="5/22/22_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1039.26" y="185.577">5/22/22</tspan></text>
+</g>
+<g id="Flight Time_3">
+<text id="Flight Time_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1240.7" y="158.665">Flight Time</tspan></text>
+<text id="1145_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1249.69" y="185.577">1145</tspan></text>
+</g>
+<g id="Departure / Arrival Info_2">
+<g id="LAX to JFK">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" letter-spacing="0em"><tspan x="1072.56" y="121.007"> to </tspan></text>
+<text fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" font-weight="800" letter-spacing="0em"><tspan x="1029.39" y="121.007">LAX</tspan><tspan x="1130.12" y="121.007">JFK</tspan></text>
+</g>
+<text id="AP913_2" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" font-weight="800" letter-spacing="0em"><tspan x="1240.79" y="121.007">AP913</tspan></text>
+</g>
+</g>
+<path id="Line 1" d="M954 6L957 429" stroke="#204A62" stroke-width="5" stroke-linejoin="round" stroke-dasharray="20 20"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_1" x="0" y="3.05176e-05" width="1157" height="447" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_0_1"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+<filter id="filter1_d_0_1" x="666.916" y="114.422" width="237.902" height="296.226" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+</filter>
+<clipPath id="clip0_0_1">
+<rect width="182.454" height="146.232" fill="white" transform="translate(930.058 109.135)"/>
+</clipPath>
+</defs>
+</svg>

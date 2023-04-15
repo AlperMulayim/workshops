@@ -1,0 +1,241 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org">
+<svg width="1341" height="468" viewBox="0 0 1341 468" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1341" height="468" fill="#E5E5E5"/>
+    <g id="Initial">
+    <rect width="1448" height="712" transform="translate(0 -102)" fill="white"/>
+    <g id="Group 1">
+    <g id="Long Boarding Pass">
+    <g id="Boarding Pass Border">
+    <g id="Pass Border" filter="url(#filter0_d_0_1)">
+    <rect x="10" y="6.00003" width="1137" height="448" rx="60" fill="white"/>
+    </g>
+    <path id="Side Strip" d="M10 66C10 32.863 36.8629 6 70 6H240.037V454H70C36.8629 454 10 427.137 10 394V66Z" fill="#204A62"/>
+    </g>
+    <g id="Passenger">
+    <text id="Passenger Name" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="295.025" y="159.448">Passenger Name</tspan></text>
+    <text id="LINDA CORNWALL" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="294.642" y="198.001" th:text="${card.passengername}"></tspan></text>
+    </g>
+    <g id="Departure Date/Time">
+    <g id="Flight Date">
+    <text id="5/22/22" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="294.642" y="292.82" th:text="${card.flightdate}"></tspan></text>
+    <text id="Flight Date_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="295.025" y="255.13">Flight Date</tspan></text>
+    </g>
+    <g id="Flight Time">
+    <text id="1145" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="512.295" y="292.82" th:text="${card.flighttime}"></tspan></text>
+    <text id="Flight Time_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="512.678" y="255.13">Flight Time</tspan></text>
+    </g>
+    </g>
+    <g id="Airplane Info" filter="url(#filter1_d_0_1)">
+    <rect id="Rectangle 1" x="670.916" y="119.754" width="229.902" height="302.401" rx="20" fill="#F4F4F4"/>
+    <g id="Seat #">
+    <text id="21E" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="396.385"  th:text="${card.seat}"></tspan></text>
+    <text id="Seat No." fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="395.793">Seat No.</tspan></text>
+    </g>
+    <g id="Class">
+    <text id="A" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="359.965"  th:text="${card.passengerclass}"></tspan></text>
+    <text id="Class_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="359.373">Class</tspan></text>
+    </g>
+    <g id="Terminal">
+    <text id="2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.436" y="305.974">-</tspan></text>
+    <text id="Terminal_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="304.315">Terminal</tspan></text>
+    </g>
+    <g id="Boarding Time">
+    <text id="1045" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="701.559" y="192.533"  th:text="${card.boardingtime}"></tspan></text>
+    <text id="Boarding time" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.941" y="152.878">Boarding time</tspan></text>
+    </g>
+    <g id="Gate">
+    <text id="D" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="28" letter-spacing="0em"><tspan x="813.297" y="272.597"  th:text="${card.gate}"></tspan></text>
+    <text id="Gate_2" fill="black" fill-opacity="0.25" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="701.559" y="269.608">Gate</tspan></text>
+    </g>
+    </g>
+    <g id="QR Code" clip-path="url(#clip0_0_1)">
+    <path id="Vector" d="M1225.81 20.0508H816.76V361.265H1225.81V20.0508Z" fill="white"/>
+    </g>
+    <g id="Airline Boarding Pass Info">
+    <g id="Logo">
+    <g id="AirplaneTilt">
+    <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M93.7079 363.643C93.7614 363.673 93.8138 363.704 93.8651 363.737L105.547 371.16C106.518 371.777 106.851 372.723 106.394 373.567L95.9659 392.823L99.9287 395.484L114.396 380.913C114.953 380.351 115.857 379.987 116.857 379.92C117.858 379.854 118.85 380.092 119.561 380.569L127.93 386.189C128.559 386.611 128.913 387.185 128.913 387.782L128.913 392.469L132.474 394.86L135.662 388.514C135.997 387.848 136.774 387.325 137.765 387.1L147.262 384.939L143.694 382.543L136.715 382.543C135.77 382.543 134.868 382.275 134.232 381.805L126.561 376.139C125.907 375.656 125.597 375.008 125.711 374.36C125.824 373.713 126.349 373.13 127.151 372.762L148.218 363.102L144.222 360.419L115.545 367.422C114.285 367.729 112.872 367.504 111.954 366.848L101.066 359.074C100.139 358.501 98.9246 358.182 97.6607 358.182C96.3274 358.182 95.0486 358.537 94.1059 359.17C93.1631 359.803 92.6334 360.662 92.6334 361.557C92.6334 362.318 93.0154 363.051 93.7079 363.643ZM105.497 355.687C103.349 354.395 100.56 353.674 97.6607 353.674C94.5471 353.674 91.5612 354.505 89.3596 355.983C87.158 357.462 85.9212 359.467 85.9212 361.557C85.9212 363.648 87.158 365.653 89.3596 367.131C89.5321 367.247 89.7191 367.348 89.9168 367.434L99.333 373.417L88.9274 392.632C88.4818 393.455 88.7863 394.376 89.7083 394.996L98.0771 400.615C98.7881 401.093 99.7804 401.331 100.781 401.264C101.782 401.198 102.685 400.834 103.243 400.272L117.71 385.7L122.201 388.716L122.201 393.402C122.201 394 122.554 394.573 123.184 394.996L131.553 400.615C132.374 401.167 133.561 401.394 134.691 401.216C135.821 401.038 136.735 400.481 137.106 399.742L141.492 391.011L154.53 388.044C155.629 387.793 156.458 387.18 156.721 386.421C156.985 385.663 156.647 384.866 155.826 384.316L147.457 378.696C146.828 378.273 145.974 378.036 145.084 378.036L138.2 378.036L134.122 375.024L155.346 365.292C156.171 364.913 156.702 364.308 156.795 363.64C156.888 362.972 156.533 362.311 155.826 361.837L147.457 356.217C146.535 355.598 145.163 355.394 143.937 355.693L115.329 362.679L106.198 356.159C106.125 356.099 106.046 356.04 105.962 355.983L105.753 355.843C105.67 355.787 105.585 355.736 105.497 355.687Z" fill="white"/>
+    </g>
+    <text id="JAVA AIRLINES" transform="matrix(0 -1 1 0 86 340.688)" fill="white" xml:space="preserve" style="white-space: pre" font-family="Jost" font-size="46" font-weight="500" letter-spacing="0em"><tspan x="0" y="48.985"  th:text="${card.airline}"></tspan></text>
+    </g>
+    <g id="Boarding Pass Class">
+    <text id="BOARDING PASS" transform="translate(169.946 396.63) rotate(-90)" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="26" letter-spacing="0em"><tspan x="0" y="27.88">BOARDING </tspan><tspan x="0" y="63.88">PASS</tspan></text>
+    <text id="ECONOMY" transform="translate(170 197.147) rotate(-90)" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="26" letter-spacing="0em"><tspan x="46.0206" y="27.88"  th:text="${card.passengerclass}" ></tspan></text>
+    </g>
+    </g>
+    <g id="Barcode">
+    <rect id="Rectangle 2" x="290.645" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 7" x="346.724" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 12" x="400.022" y="347.393" width="11.1252" height="56.3191" fill="black"/>
+    <rect id="Rectangle 3" x="299.636" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 8" x="358.496" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 13" x="417.357" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 4" x="311.408" y="347.393" width="11.1252" height="56.3191" fill="black"/>
+    <rect id="Rectangle 9" x="367.487" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 14" x="426.347" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 5" x="328.743" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 10" x="379.259" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 15" x="438.119" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 6" x="337.734" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 11" x="391.031" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 16" x="449.892" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 2_2" x="458.882" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 7_2" x="514.962" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 12_2" x="568.259" y="347.393" width="11.1252" height="56.3191" fill="black"/>
+    <rect id="Rectangle 3_2" x="467.873" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 8_2" x="526.734" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 13_2" x="585.594" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 4_2" x="479.645" y="347.393" width="11.1252" height="56.3191" fill="black"/>
+    <rect id="Rectangle 9_2" x="535.724" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 14_2" x="594.585" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 5_2" x="496.98" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 10_2" x="547.496" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 15_2" x="606.357" y="347.393" width="5.56262" height="56.3191" fill="black"/>
+    <rect id="Rectangle 6_2" x="505.971" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 11_2" x="559.269" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    <rect id="Rectangle 16_2" x="618.129" y="347.393" width="2.78131" height="56.3191" fill="black"/>
+    </g>
+    <g id="Departure / Arrival Info">
+    <g id="Flight #">
+    <text id="Flight No." fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="bold" letter-spacing="0em"><tspan x="793.478" y="47.1253">Flight No.</tspan></text>
+    <text id="AP913" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" font-weight="bold" letter-spacing="0em"><tspan x="775.49" y="94.5871"  th:text="${card.flightno}"></tspan></text>
+    </g>
+    <g id="Departure">
+    <text id="Departing from" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="800" letter-spacing="0em"><tspan x="292.04" y="46.6477">Departing from</tspan></text>
+    <text id="LAX" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" letter-spacing="0em"><tspan x="310.606" y="94.11"  th:text="${card.departure}"></tspan></text>
+    </g>
+    <g id="Arrival">
+    <text id="Arriving at" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="12" font-weight="800" letter-spacing="0em"><tspan x="493.26" y="46.6477">Arriving at</tspan></text>
+    <text id="JFK" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="36" letter-spacing="0em"><tspan x="501.034" y="94.11" th:text="${card.arrival}"></tspan></text>
+    </g>
+    <g id="AirplaneInFlight">
+    <path id="Vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M423.453 89.9569C423.453 89.4132 424.078 88.9724 424.849 88.9724H447.714C448.485 88.9724 449.109 89.4132 449.109 89.9569C449.109 90.5007 448.485 90.9415 447.714 90.9415H424.849C424.078 90.9415 423.453 90.5007 423.453 89.9569Z" fill="black"/>
+    <path id="Vector (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M428.055 73.0182L429.984 77.0993C430.126 77.3995 430.054 77.7296 429.792 77.9863C429.53 78.2431 429.108 78.3952 428.66 78.3952H423.579C423.164 78.3952 422.772 78.2654 422.506 78.0409L419.749 75.7067H417.834L420.025 80.8462C420.252 81.3811 420.718 81.8504 421.353 82.1841C421.987 82.5176 422.757 82.6982 423.548 82.6992H450.129V80.9953C450.129 80.3057 449.741 79.6444 449.05 79.1568C448.358 78.6691 447.421 78.3952 446.444 78.3952H437.552C437.16 78.3952 436.787 78.2794 436.523 78.0759L429.951 73.0182H428.055ZM417.674 73.7375H420.403C420.817 73.7375 421.21 73.8673 421.475 74.0918L424.232 76.426H426.723L425.349 73.5175C425.217 73.235 425.183 72.9345 425.247 72.6406C425.312 72.3468 425.475 72.068 425.722 71.827C425.969 71.5861 426.294 71.39 426.669 71.2548C427.045 71.1195 427.46 71.049 427.882 71.049H430.565C430.956 71.049 431.33 71.1649 431.594 71.3683L438.166 76.426H446.444C448.161 76.426 449.809 76.9074 451.023 77.7643C452.238 78.6212 452.92 79.7834 452.92 80.9953V83.6838C452.92 84.2276 452.295 84.6684 451.525 84.6684L423.545 84.6684C422.154 84.6669 420.8 84.3495 419.685 83.7631C418.57 83.1769 417.752 82.3529 417.352 81.4132L415.113 76.1594C414.993 75.8779 414.968 75.58 415.041 75.2905C415.113 75.0011 415.281 74.7276 415.531 74.4922C415.78 74.2567 416.104 74.0658 416.477 73.9348C416.849 73.8041 417.259 73.7366 417.674 73.7375Z" fill="black"/>
+    </g>
+    </g>
+    </g>
+    <g id="Short Boarding Pass">
+    <g id="Short Pass Border">
+    <rect id="Rectangle 17" x="987" y="6" width="354" height="448" rx="60" fill="white"/>
+    <path id="Rectangle 18" d="M987 66C987 32.8629 1013.86 6 1047 6H1281C1314.14 6 1341 32.8629 1341 66V80.9798H987V66Z" fill="#204A62"/>
+    </g>
+    <g id="Logo_2">
+    <g id="AirplaneTilt_2">
+    <path id="Vector (Stroke)_4" fill-rule="evenodd" clip-rule="evenodd" d="M1109.9 22.9199C1109.89 22.9335 1109.87 22.9468 1109.86 22.9597L1106.59 25.919C1106.32 26.1651 1105.9 26.2494 1105.53 26.1336L1097.05 23.4919L1095.88 24.4958L1102.3 28.1606C1102.54 28.3019 1102.7 28.5308 1102.73 28.7842C1102.76 29.0377 1102.66 29.2891 1102.45 29.4692L1099.97 31.5892C1099.79 31.7487 1099.54 31.8382 1099.27 31.8382H1097.21L1096.16 32.7404L1098.95 33.548C1099.24 33.6327 1099.47 33.8297 1099.57 34.0807L1100.52 36.4864L1101.58 35.5827V33.8148C1101.58 33.5752 1101.7 33.3468 1101.9 33.1857L1104.4 31.2423C1104.61 31.0769 1104.9 30.9983 1105.18 31.027C1105.47 31.0557 1105.72 31.1888 1105.88 31.392L1110.14 36.7286L1111.32 35.7165L1108.23 28.4519C1108.1 28.1326 1108.2 27.7748 1108.49 27.542L1111.91 24.7838C1112.16 24.5492 1112.3 24.2414 1112.3 23.9212C1112.3 23.5835 1112.15 23.2596 1111.87 23.0207C1111.59 22.7819 1111.21 22.6477 1110.82 22.6477C1110.48 22.6477 1110.16 22.7445 1109.9 22.9199ZM1113.4 25.9063C1113.97 25.3622 1114.29 24.6558 1114.29 23.9212C1114.29 23.1325 1113.92 22.3761 1113.27 21.8184C1112.62 21.2607 1111.74 20.9473 1110.82 20.9473C1109.9 20.9473 1109.01 21.2607 1108.36 21.8184C1108.31 21.8621 1108.27 21.9095 1108.23 21.9595L1105.6 24.3449L1097.14 21.7089C1096.77 21.596 1096.37 21.6731 1096.1 21.9067L1093.62 24.0268C1093.41 24.2069 1093.31 24.4582 1093.34 24.7117C1093.37 24.9652 1093.53 25.194 1093.77 25.3353L1100.19 29.0002L1098.86 30.1379H1096.8C1096.53 30.1379 1096.28 30.2274 1096.1 30.3869L1093.62 32.5069C1093.38 32.7149 1093.28 33.0156 1093.36 33.3019C1093.44 33.5883 1093.68 33.8197 1094.01 33.9137L1097.85 35.0248L1099.16 38.3277C1099.27 38.6061 1099.54 38.816 1099.87 38.8828C1100.2 38.9496 1100.56 38.8639 1100.8 38.656L1103.27 36.536C1103.46 36.3766 1103.56 36.1603 1103.56 35.9348V34.1909L1104.89 33.1578L1109.17 38.5343C1109.34 38.7433 1109.61 38.8778 1109.9 38.9014C1110.19 38.9249 1110.48 38.835 1110.69 38.656L1113.17 36.536C1113.44 36.3024 1113.53 35.9547 1113.4 35.6443L1110.32 28.397L1113.19 26.084C1113.22 26.0654 1113.25 26.0455 1113.27 26.0241L1113.33 25.9711C1113.36 25.9503 1113.38 25.9287 1113.4 25.9063Z" fill="white"/>
+    </g>
+    </g>
+    <g id="Barcode_2">
+    <rect id="Rectangle 2_3" x="1070.25" y="220.876" width="1.6634" height="47.0253" transform="rotate(90 1070.25 220.876)" fill="black"/>
+    <rect id="Rectangle 7_3" x="1070.25" y="254.415" width="3.32679" height="47.0253" transform="rotate(90 1070.25 254.415)" fill="black"/>
+    <rect id="Rectangle 12_3" x="1070.25" y="286.29" width="6.65358" height="47.0253" transform="rotate(90 1070.25 286.29)" fill="black"/>
+    <rect id="Rectangle 3_3" x="1070.25" y="226.254" width="3.32679" height="47.0253" transform="rotate(90 1070.25 226.254)" fill="black"/>
+    <rect id="Rectangle 8_3" x="1070.25" y="261.456" width="1.6634" height="47.0253" transform="rotate(90 1070.25 261.456)" fill="black"/>
+    <rect id="Rectangle 13_3" x="1070.25" y="296.658" width="1.6634" height="47.0253" transform="rotate(90 1070.25 296.658)" fill="black"/>
+    <rect id="Rectangle 4_3" x="1070.25" y="233.294" width="6.65358" height="47.0253" transform="rotate(90 1070.25 233.294)" fill="black"/>
+    <rect id="Rectangle 9_3" x="1070.25" y="266.833" width="3.32679" height="47.0253" transform="rotate(90 1070.25 266.833)" fill="black"/>
+    <rect id="Rectangle 14_3" x="1070.25" y="302.035" width="3.32679" height="47.0253" transform="rotate(90 1070.25 302.035)" fill="black"/>
+    <rect id="Rectangle 5_3" x="1070.25" y="243.661" width="1.6634" height="47.0253" transform="rotate(90 1070.25 243.661)" fill="black"/>
+    <rect id="Rectangle 10_3" x="1070.25" y="273.873" width="3.32679" height="47.0253" transform="rotate(90 1070.25 273.873)" fill="black"/>
+    <rect id="Rectangle 15_3" x="1070.25" y="309.075" width="3.32679" height="47.0253" transform="rotate(90 1070.25 309.075)" fill="black"/>
+    <rect id="Rectangle 6_3" x="1070.25" y="249.038" width="1.6634" height="47.0253" transform="rotate(90 1070.25 249.038)" fill="black"/>
+    <rect id="Rectangle 11_3" x="1070.25" y="280.913" width="1.6634" height="47.0253" transform="rotate(90 1070.25 280.913)" fill="black"/>
+    <rect id="Rectangle 16_3" x="1070.25" y="316.116" width="1.6634" height="47.0253" transform="rotate(90 1070.25 316.116)" fill="black"/>
+    <rect id="Rectangle 2_4" x="1070.25" y="321.493" width="1.6634" height="47.0253" transform="rotate(90 1070.25 321.493)" fill="black"/>
+    <rect id="Rectangle 7_4" x="1070.25" y="355.031" width="3.32679" height="47.0253" transform="rotate(90 1070.25 355.031)" fill="black"/>
+    <rect id="Rectangle 12_4" x="1070.25" y="386.907" width="6.65358" height="47.0253" transform="rotate(90 1070.25 386.907)" fill="black"/>
+    <rect id="Rectangle 3_4" x="1070.25" y="326.87" width="3.32679" height="47.0253" transform="rotate(90 1070.25 326.87)" fill="black"/>
+    <rect id="Rectangle 8_4" x="1070.25" y="362.072" width="1.6634" height="47.0253" transform="rotate(90 1070.25 362.072)" fill="black"/>
+    <rect id="Rectangle 13_4" x="1070.25" y="397.274" width="1.6634" height="47.0253" transform="rotate(90 1070.25 397.274)" fill="black"/>
+    <rect id="Rectangle 4_4" x="1070.25" y="333.91" width="6.65358" height="47.0253" transform="rotate(90 1070.25 333.91)" fill="black"/>
+    <rect id="Rectangle 9_4" x="1070.25" y="367.449" width="3.32679" height="47.0253" transform="rotate(90 1070.25 367.449)" fill="black"/>
+    <rect id="Rectangle 14_4" x="1070.25" y="402.651" width="3.32679" height="47.0253" transform="rotate(90 1070.25 402.651)" fill="black"/>
+    <rect id="Rectangle 5_4" x="1070.25" y="344.277" width="1.6634" height="47.0253" transform="rotate(90 1070.25 344.277)" fill="black"/>
+    <rect id="Rectangle 10_4" x="1070.25" y="374.489" width="3.32679" height="47.0253" transform="rotate(90 1070.25 374.489)" fill="black"/>
+    <rect id="Rectangle 15_4" x="1070.25" y="409.691" width="3.32679" height="47.0253" transform="rotate(90 1070.25 409.691)" fill="black"/>
+    <rect id="Rectangle 6_4" x="1070.25" y="349.654" width="1.6634" height="47.0253" transform="rotate(90 1070.25 349.654)" fill="black"/>
+    <rect id="Rectangle 11_4" x="1070.25" y="381.53" width="1.6634" height="47.0253" transform="rotate(90 1070.25 381.53)" fill="black"/>
+    <rect id="Rectangle 16_4" x="1070.25" y="416.732" width="1.6634" height="47.0253" transform="rotate(90 1070.25 416.732)" fill="black"/>
+    </g>
+    <text id="ECONOMY_2" fill="white" fill-opacity="0.75" xml:space="preserve" style="white-space: pre" font-family="Jockey One" font-size="16" letter-spacing="0em"><tspan x="1135.84" y="58.4395"  th:text="${card.passengerclass}"></tspan></text>
+    <g id="Passenger Info">
+    <text id="Passenger Name_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="228.252">Passenger Name</tspan></text>
+    <text id="LINDA CORNWALL_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1110.18" y="255.991"  th:text="${card.passengername}"></tspan></text>
+    </g>
+    <g id="Boarding + Seat Info">
+    <path id="Rectangle 19" d="M1093.74 277.2H1295.25C1309.06 277.2 1320.25 288.393 1320.25 302.2V393.395C1320.25 407.202 1309.06 418.395 1295.25 418.395H1093.74V277.2Z" fill="#F4F4F4"/>
+    <g id="Boarding Info">
+    <g id="Boarding Info_2">
+    <text id="Boarding Time_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="306.777">Boarding Time</tspan></text>
+    <text id="1045_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1110.18" y="334.516"  th:text="${card.boardingtime}"></tspan></text>
+    </g>
+    <g id="Airport Info">
+    <g id="Terminal #">
+    <text id="Terminal_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1214.34" y="307.201">Terminal</tspan></text>
+    <text id="2_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1279.44" y="308.002">-</tspan></text>
+    </g>
+    <g id="Gate #">
+    <text id="Gate_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1214.34" y="333.715">Gate</tspan></text>
+    <text id="D_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1279.44" y="334.516" th:text="${card.gate}" ></tspan></text>
+    </g>
+    </g>
+    </g>
+    <g id="Seat Info">
+    <g id="Class #">
+    <text id="Class_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="378.839">Class</tspan></text>
+    <text id="A_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1181.79" y="379.641" th:text="${card.passengerclass}"></tspan></text>
+    </g>
+    <g id="Seat #_2">
+    <text id="Seat No._2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1110.18" y="403.015">Seat No.</tspan></text>
+    <text id="21E_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1181.79" y="403.817" th:text="${card.seat}"></tspan></text>
+    </g>
+    </g>
+    </g>
+    <g id="Flight Date_3">
+    <text id="Flight Date_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1048.26" y="165.676">Flight Date</tspan></text>
+    <text id="5/22/22_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1039.26" y="193.415" th:text="${card.flightdate}" ></tspan></text>
+    </g>
+    <g id="Flight Time_3">
+    <text id="Flight Time_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="10" letter-spacing="0em"><tspan x="1240.7" y="165.676">Flight Time</tspan></text>
+    <text id="1145_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="20" letter-spacing="0em"><tspan x="1249.69" y="193.415" th:text="${card.flighttime}"></tspan></text>
+    </g>
+    <g id="Departure / Arrival Info_2">
+    <g id="LAX to JFK">
+    <text fill="black" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" letter-spacing="0em"><tspan x="1072.56" y="125.451"> to </tspan></text>
+    <text fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" font-weight="800" letter-spacing="0em"><tspan x="1029.39" y="125.451" th:text="${card.departure}"></tspan><tspan x="1130.12" y="125.451" th:text="${card.arrival}"></tspan></text>
+    </g>
+    <text id="AP913_2" fill="#204A62" xml:space="preserve" style="white-space: pre" font-family="JetBrains Mono" font-size="24" font-weight="800" letter-spacing="0em"><tspan x="1240.79" y="125.451" th:text="${card.flightno}"></tspan></text>
+    </g>
+    </g>
+    <path id="Line 1" d="M954 6L957.025 449.803" stroke="#204A62" stroke-width="5" stroke-linejoin="round" stroke-dasharray="20 20"/>
+    </g>
+    </g>
+    <text id="JAVA AIRLINES_2" transform="translate(1121 16)" fill="white" xml:space="preserve" style="white-space: pre" font-family="Jost" font-size="20" letter-spacing="0em"><tspan x="0" y="21.45" th:text="${card.airline}" ></tspan></text>
+    <defs>
+    <filter id="filter0_d_0_1" x="0" y="3.05176e-05" width="1157" height="468" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_0_1"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="4"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+    <filter id="filter1_d_0_1" x="666.916" y="119.754" width="237.902" height="310.401" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="2"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+    <clipPath id="clip0_0_1">
+    <rect width="182.454" height="153.424" fill="white" transform="translate(930.058 114.207)"/>
+    </clipPath>
+    </defs>
+    </svg>
+</html>    
