@@ -11,3 +11,4 @@ Notes:
 - [Docker](tutor-docker.md)
 - [Unit Test & Integration Test](unit-test.md)
 - [MongoDB](mongodb-course.md)
+- [Spring REST Thymeleaf Engine Figma SVG Template ](svgapi/readme.md)
