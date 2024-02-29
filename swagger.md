@@ -43,4 +43,16 @@ public class CouponearApplication {
 			<version>2.6.1</version>
 		</dependency>
 		
-		
+``````		
+### SPRING BOOT v3 integration SpringDoc. https://springdoc.org/migrating-from-springfox.html
+
+
+``````
+
+   <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>2.2.0</version>
+   </dependency>
+
+``````
