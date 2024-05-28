@@ -13,3 +13,4 @@ Notes:
 - [MongoDB](mongodb-course.md)
 - [Spring REST Thymeleaf Engine Figma SVG Template ](svgapi/readme.md)
 - [Google Maps with Angular ](google-maps-angular.md)
+- [QR Code Generation ](qr-code.md)
