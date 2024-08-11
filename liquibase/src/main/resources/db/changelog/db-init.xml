@@ -8,4 +8,6 @@
             <column name="name" type="VARCHAR(10)"/>
         </createTable>
     </changeSet>
+
+
 </databaseChangeLog>
