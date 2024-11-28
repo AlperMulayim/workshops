@@ -16,3 +16,4 @@ Notes:
 - [QR Code Generation ](qr-code.md)
 - [JPA filtering by Spesification](spesification-jpa-search.md)
 - [Liquibase](Liquibase.md)
+- [Spring Batch](Spring-Batch.md)
