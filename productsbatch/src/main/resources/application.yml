@@ -1,0 +1,14 @@
+#spring:
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost/productsbatchdb
+#    username: root
+#    password: rootpass
+#    jpa:
+#      hibernate.ddl-auto: validate
+#      generate-ddl: true
+#      show-sql: true
+#
+#  batch:
+#    db:
+#      initialize-schema: ALWAYS
