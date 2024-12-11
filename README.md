@@ -17,3 +17,4 @@ Notes:
 - [JPA filtering by Spesification](spesification-jpa-search.md)
 - [Liquibase](Liquibase.md)
 - [Spring Batch](Spring-Batch.md)
+- [Spring Security Database DaoAuthenticationProvider](Spring-Security-Database-DaoAuthenticationProvider.md)
