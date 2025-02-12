@@ -199,3 +199,179 @@ public class ProductPriceUpdateProcessor implements
     }
 }
 ```
+
+
+
+# Spring Batch with JPA: Full Implementation
+
+## 1. Entity for `User`
+
+The `User` entity represents the `User` table in the database.
+
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String name;
+    private String email;
+    private String status;
+}
+```
+
+## 2. Repository Interface for `User`
+
+The repository provides the `findByStatus` method to fetch users by their status.
+
+```java
+public interface UserRepository extends JpaRepository<User, Long> {
+    List<User> findByStatus(String status, Pageable pageable);
+}
+```
+
+## 3. DTO for `UserDTO` (optional)
+
+If you need to transform the `User` entity, you can create a DTO class.
+
+```java
+public class UserDTO {
+    private Long id;
+    private String name;
+    private String email;
+
+    public UserDTO(Long id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters and setters
+}
+```
+
+## 4. Batch Job Configuration
+
+### Reader Bean: `JpaPagingItemReader`
+
+The `JpaPagingItemReader` fetches data from the database using pagination.
+
+```java
+@Bean
+@StepScope
+public JpaPagingItemReader<User> reader(UserRepository userRepository, @Value("#{jobParameters['status']}") String status) {
+    JpaPagingItemReader<User> reader = new JpaPagingItemReader<>();
+    reader.setRepository(userRepository);  // Set the JPA repository
+    reader.setPageSize(10);  // Set page size (chunk size in Spring Batch)
+    reader.setQueryString("findByStatus");  // Automatically map to repository method
+    return reader;
+}
+```
+
+### Processor Bean: `ItemProcessor`
+
+The `ItemProcessor` transforms the `User` entity into a `UserDTO`.
+
+```java
+@Bean
+public ItemProcessor<User, UserDTO> processor() {
+    return user -> new UserDTO(user.getId(), user.getName(), user.getEmail());  // Convert to DTO
+}
+```
+
+### Writer Bean: `JpaItemWriter`
+
+The `JpaItemWriter` writes the `UserDTO` to the database. For simplicity, assume we are writing to a different table or handling it directly.
+
+```java
+@Bean
+public JpaItemWriter<UserDTO> writer(EntityManagerFactory entityManagerFactory) {
+    JpaItemWriter<UserDTO> writer = new JpaItemWriter<>();
+    writer.setEntityManagerFactory(entityManagerFactory);
+    return writer;
+}
+```
+
+### Step Configuration
+
+The step wires the reader, processor, and writer components together.
+
+```java
+@Bean
+public Step step1(JpaPagingItemReader<User> reader, ItemProcessor<User, UserDTO> processor, JpaItemWriter<UserDTO> writer) {
+    return stepBuilderFactory.get("step1")
+            .<User, UserDTO>chunk(10)  // Define chunk size for batch processing
+            .reader(reader)
+            .processor(processor)
+            .writer(writer)
+            .build();
+}
+```
+
+## 5. Job Configuration
+
+The job is configured to use the step and dynamic job parameters.
+
+```java
+@Bean
+public Job batchJob(JobBuilderFactory jobBuilderFactory, Step step1) {
+    return jobBuilderFactory.get("batchJob")
+            .start(step1)
+            .build();
+}
+
+@Bean
+public JobParameters jobParameters() {
+    return new JobParametersBuilder()
+            .addString("status", "active")  // Pass status dynamically
+            .toJobParameters();
+}
+```
+
+## 6. Main Application to Launch Job
+
+The main application class launches the batch job with dynamic parameters.
+
+```java
+@SpringBootApplication
+public class BatchApplication implements CommandLineRunner {
+
+    @Autowired
+    private JobLauncher jobLauncher;
+
+    @Autowired
+    private Job batchJob;
+
+    @Override
+    public void run(String... args) throws Exception {
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addString("status", "active")  // Set status dynamically when running the job
+                .toJobParameters();
+        
+        jobLauncher.run(batchJob, jobParameters);  // Launch the job with parameters
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(BatchApplication.class, args);
+    }
+}
+```
+
+## 7. Final Summary
+
+This implementation creates a **Spring Batch job** that:
+
+1. Reads `User` data based on a dynamic **`status`** parameter.
+2. **Transforms** the data (optional) into a `UserDTO` for further processing.
+3. **Writes** the processed `UserDTO` data to the database using **`JpaItemWriter`**.
+4. Passes the **status** as a **dynamic job parameter** when launching the job.
+
+Everything is properly wired together, including:
+
+- **`JpaPagingItemReader`** for reading paginated data.
+- **`ItemProcessor`** for transforming data.
+- **`JpaItemWriter`** for saving the processed data.
+- **`JobParameters`** for dynamically passing the `status` parameter.
+
+---
