@@ -1,0 +1,7 @@
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/config/NewsApiClientConfiguration.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/config/NewsApiClientSpringBootStarterProperties.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/newsapi/NewsApiClient.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/newsapi/NewsApiUrlUtils.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/Article.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/NewsApiResponse.java
+/Users/alpermulayim/Desktop/github/workshops/newsapiclient-spring-boot-starter/src/main/java/com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/Source.java

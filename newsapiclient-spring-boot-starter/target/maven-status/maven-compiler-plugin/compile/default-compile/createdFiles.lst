@@ -1,0 +1,7 @@
+com/alper/newsapiclient_spring_boot_starter/config/NewsApiClientSpringBootStarterProperties.class
+com/alper/newsapiclient_spring_boot_starter/newsapi/NewsApiUrlUtils.class
+com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/Source.class
+com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/Article.class
+com/alper/newsapiclient_spring_boot_starter/newsapi/NewsApiClient.class
+com/alper/newsapiclient_spring_boot_starter/newsapi/dtos/NewsApiResponse.class
+com/alper/newsapiclient_spring_boot_starter/config/NewsApiClientConfiguration.class
