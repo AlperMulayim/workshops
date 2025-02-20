@@ -1,29 +1,77 @@
-# Read Me First
-The following was discovered as part of building this project:
+```java
+	<dependency>
+			<groupId>com.alpermulayim</groupId>
+			<artifactId>news-api-springboot-starter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+```
 
-* The original package name 'com.alper.newsapiclient-spring-boot-starter' is invalid and this project uses 'com.alper.newsapiclient_spring_boot_starter' instead.
+## `NewsApiClient`  Methods.
 
-# Getting Started
+```java
+List<Article> getArticles(String subject, String dateFrom, String lang); 
+NewsApiResponse requestNews(String subject, String dateFrom, String lang);
 
-### Reference Documentation
-For further reference, please consider the following sections:
+subject: query search parameter subject like < bitcoin, europe, breaking news.> 
+date: format YYYY-MM-DD <2024-02-22> 
+lang: language-code <tr,en,fr> 
+```
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.2/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.4.2/maven-plugin/build-image.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.4.2/reference/web/servlet.html)
+## How to use starter news-api-springboot-starter in another Spring Boot Application
 
-### Guides
-The following guides illustrate how to use some features concretely:
+1. Build the starter code,
+2. Classic importing steps for spring boot starters, we can use directly the weblient methods now.
+3. With **news-api-springboot-starter**  we are able to call Rest Api of NewsApi without custom webclient  configurations and implementation. Easy to use and simple!
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+```java
+	<dependency>
+			<groupId>com.alpermulayim</groupId>
+			<artifactId>news-api-springboot-starter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+```
 
-### Maven Parent overrides
+NewsApiClient need to NewsApiClientSpringBootStarterProperties with url and api key.
 
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
+Please visit [https://newsapi.org](https://newsapi.org/) for creating new  API_KEY.
 
+```java
+@Configuration
+public class NewsConfig {
+
+    @Bean
+    public NewsApiClient client() throws Exception{
+        return new NewsApiClient( new NewsApiClientSpringBootStarterProperties(
+        "https://newsapi.org/v2/",
+        "API_KEY"));
+    }
+}
+
+```
+
+```java
+
+//Demo use case we need to implement our service and request mapping :) 
+@RestController
+@RequestMapping("api/v1/public/news")
+public class NewsController {
+
+    private NewsApiClient newsApiClient;
+
+    @Autowired
+    public NewsController(NewsApiClient newsApiClient) {
+        this.newsApiClient = newsApiClient;
+    }
+
+    @GetMapping
+    public NewsApiResponse getAll(){
+        return newsApiClient.requestNews("bitcoin","2025-02-01","en");
+    }
+
+    @GetMapping("/articles")
+    public List<Article> getArticles(){
+        return newsApiClient.getArticles("europe","2025-02-01","tr");
+    }
+}
+
+```
