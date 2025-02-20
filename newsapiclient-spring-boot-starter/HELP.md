@@ -1,5 +1,5 @@
 ```java
-	<dependency>
+		<dependency>
 			<groupId>com.alpermulayim</groupId>
 			<artifactId>news-api-springboot-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -24,7 +24,7 @@ lang: language-code <tr,en,fr>
 3. With **news-api-springboot-starter**  we are able to call Rest Api of NewsApi without custom webclient  configurations and implementation. Easy to use and simple!
 
 ```java
-	<dependency>
+		<dependency>
 			<groupId>com.alpermulayim</groupId>
 			<artifactId>news-api-springboot-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
