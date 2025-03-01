@@ -56,3 +56,9 @@ public class CouponearApplication {
    </dependency>
 
 ``````
+
+``````
+springdoc:
+  swagger-ui:
+    enabled: true
+``````
