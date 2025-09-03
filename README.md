@@ -19,3 +19,6 @@ Notes:
 - [Spring Batch](Spring-Batch.md)
 - [Spring Security Database DaoAuthenticationProvider](Spring-Security-Database-DaoAuthenticationProvider.md)
 - [Flyway DB Migration](flyway_db_migration.md)
+
+
+<img width="1872" height="886" alt="image" src="https://github.com/user-attachments/assets/587c424b-c646-40ed-96fd-c492e6853493" />
