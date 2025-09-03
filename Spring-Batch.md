@@ -1,6 +1,7 @@
 # Spring Batch
 
 ![image.png](Spring%20Batch%2014cd0061bdb680d0947fee23af56ce84/image.png)
+<img width="1872" height="886" alt="image" src="https://github.com/user-attachments/assets/62311ec2-593c-46e0-b70b-8671d0c6c691" />
 
 Spring Batch Using own tables for job details.
 
